@@ -98,6 +98,20 @@ This repository is an active research record and should not yet be cited as a fi
 
 Adhityo Wicaksono
 
+## Primary source publications
+
+The two published *Sapria himalayana* genome resources reanalyzed in RE-SAPRIA originate from:
+
+1. Cai L, Arnold BJ, Xi Z, et al. (2021). Deeply altered genome architecture in the endoparasitic flowering plant *Sapria himalayana* Griff. (Rafflesiaceae). *Current Biology* 31(5):1002–1011.e9. https://doi.org/10.1016/j.cub.2020.12.045
+
+2. Guo X, et al. (2023). The *Sapria himalayana* genome provides new insights into the lifestyle of endoparasitic plants. *BMC Biology* 21:134. https://doi.org/10.1186/s12915-023-01620-3
+
+These publications should be cited when using, discussing, or redistributing analyses derived from the corresponding published assemblies or sequencing datasets.
+
+## License
+
+This repository is licensed under *MIT License*.
+
 ## Disclaimer
 
 Two accessions do not represent species-wide populations or regional adaptation. Assembly differences must not be interpreted automatically as biological structural variation without orthogonal validation.
