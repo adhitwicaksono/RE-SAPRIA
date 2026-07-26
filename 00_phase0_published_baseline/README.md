@@ -99,7 +99,7 @@ Complete commands are archived in [`commands/MUMmer4_commands.md`](commands/MUMm
 
 ## Figure 1 — Broad Galaxy NUCmer plot
 
-![Broad Galaxy NUCmer plot](figures/Phase0_Galaxy_broad_NUCmer_plot.jpg)
+![Broad Galaxy NUCmer plot](figures/Phase0_Galaxy_broad_NUCmer_plot.png)
 
 **Interpretation:** The broad Galaxy view is saturated by extensive repetitive, duplicated, reverse-oriented, and multiply matching sequence relationships. The very different scaffold counts—128,027 for Cai and 18,718 for Guo—plus arbitrary contig order make the plot unsuitable for direct structural interpretation.
 
