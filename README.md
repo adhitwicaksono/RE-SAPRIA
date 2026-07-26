@@ -37,7 +37,7 @@ Do not upload raw FASTQ, BAM, full genome FASTA, or other very large files.
 
 | Phase | Scope | Status |
 |---|---|---|
-| Phase 0 | Published Cai and Guo baseline comparison | In progress |
+| Phase 0 | Published Cai and Guo baseline comparison | Complete |
 | Phase 1.0 | Cai ONT Flye draft assembly | Complete |
 | Phase 1.1 | Cai Illumina polishing | Planned |
 | Phase 1.2 | Cai final assembly selection | Planned |
