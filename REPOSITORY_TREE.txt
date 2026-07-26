@@ -2,14 +2,24 @@
 00_phase0_published_baseline/
     README.md
     busco/
+        Cai_published_BUSCO5.8_embryophyta_odb10_AUGUSTUS.txt
+        Cai_published_BUSCO5.8_embryophyta_odb10_Miniprot.txt
+        Guo_published_BUSCO5.8_embryophyta_odb10_AUGUSTUS.txt
+        Guo_published_BUSCO5.8_embryophyta_odb10_Miniprot.txt
         README.md
+    commands/
+        MUMmer4_commands.md
     figures/
+        Phase0_Galaxy_broad_NUCmer_plot.png
+        Phase0_Gargantua_many_to_many_MUMmerplot.png
+        Phase0_Gargantua_strict_one_to_one_MUMmerplot.png
         README.md
     literature_methods/
         README.md
     minimap2/
         README.md
     mummer_dnadiff/
+        CaiPublishedRef_GuoPublishedQuery_dnadiff.report
         README.md
     published_assembly_qc/
         README.md
@@ -136,6 +146,7 @@ DATA_MANIFEST.tsv
 DECISIONS.md
 PROJECT_MAP.md
 README.md
+REPOSITORY_TREE.txt
 SOFTWARE_VERSIONS.tsv
 docs/
     README.md
