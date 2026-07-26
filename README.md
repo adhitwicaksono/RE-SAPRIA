@@ -110,7 +110,7 @@ These publications should be cited when using, discussing, or redistributing ana
 
 ## License
 
-This repository is licensed under *MIT License*.
+This repository is licensed under **MIT License**.
 
 ## Disclaimer
 
