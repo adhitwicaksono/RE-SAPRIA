@@ -1,0 +1,9 @@
+phase	software	version	context
+0	MUMmer	4	Published assembly comparison on Gargantua
+0	Minimap2	TO_BE_ADDED	Assembly-to-assembly comparison
+1.0	Flye	2.9.6	Cai ONT draft assembly in Galaxy
+1.0	QUAST	TO_BE_ADDED	Reference-free assembly statistics
+1.0	BUSCO	5.8.0	Genome mode; embryophyta_odb10
+1.0	Minimap2	TO_BE_ADDED	ONT read-back mapping
+1.0	Samtools	TO_BE_ADDED	Flagstat and coverage
+1.0	Mosdepth	TO_BE_ADDED	Coverage summary

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "This repository is an active research record. Please contact the maintainer before citing."
+title: "RE-SAPRIA: Reassembly and comparative genomics of Sapria himalayana"
+type: software
+authors:
+  - family-names: Wicaksono
+    given-names: Adhityo
+version: 0.1.0
+date-released: 2026-07-26
+repository-code: "TO_BE_ADDED"
+license: "NOASSERTION"

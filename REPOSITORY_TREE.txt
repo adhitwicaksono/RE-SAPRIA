@@ -1,0 +1,143 @@
+.gitignore
+00_phase0_published_baseline/
+    README.md
+    busco/
+        README.md
+    figures/
+        README.md
+    literature_methods/
+        README.md
+    minimap2/
+        README.md
+    mummer_dnadiff/
+        README.md
+    published_assembly_qc/
+        README.md
+01_phase1_cai_reassembly/
+    README.md
+    phase1_0_flye_ont/
+        README.md
+        busco_augustus/
+            README.md
+        busco_miniprot/
+            README.md
+        commands/
+            README.md
+        mapping_qc/
+            README.md
+        quast/
+            README.md
+        reports/
+            README.md
+    phase1_1_short_read_polishing/
+        README.md
+        busco/
+            README.md
+        comparison/
+            README.md
+        hypo_trial/
+            README.md
+        mapping_qc/
+            README.md
+        pilon_round1/
+            README.md
+        pilon_round2/
+            README.md
+        quast/
+            README.md
+    phase1_2_final_selection/
+        README.md
+02_phase2_guo_reassembly/
+    README.md
+    phase2_0_flye_pacbio/
+        README.md
+    phase2_1_short_read_polishing/
+        README.md
+    phase2_2_final_selection/
+        README.md
+03_phase3_harmonized_comparison/
+    README.md
+    coverage_comparison/
+        README.md
+    figures/
+        README.md
+    minimap2/
+        README.md
+    mummer_dnadiff/
+        README.md
+    tables/
+        README.md
+    unaligned_sequences/
+        README.md
+04_phase4_repeat_annotation/
+    README.md
+05_phase5_gene_annotation/
+    README.md
+    annotation_comparison/
+        README.md
+    augustus_control/
+        README.md
+    braker3/
+        README.md
+    browser_examples/
+        README.md
+    confidence_sets/
+        README.md
+    helixer/
+        README.md
+    published_annotations/
+        README.md
+06_phase6_functional_comparative_genomics/
+    README.md
+    busco_omark/
+        README.md
+    diamond/
+        README.md
+    figures/
+        README.md
+    interpro_pfam/
+        README.md
+    intron_analysis/
+        README.md
+    orthofinder/
+        README.md
+    pathways/
+        README.md
+    tables/
+        README.md
+07_phase7_manuscript_outputs/
+    README.md
+    figures/
+        README.md
+    methods_snapshot/
+        README.md
+    reproducibility_checklist/
+        README.md
+    supplementary_files/
+        README.md
+    tables/
+        README.md
+90_andrian_exploratory/
+    README.md
+    failed_runs/
+        README.md
+    other_genomes/
+        README.md
+    parameter_tests/
+        README.md
+    sapria_trials/
+        README.md
+    september_presentation/
+        README.md
+CHANGELOG.md
+CITATION.cff
+CONTRIBUTING.md
+DATA_MANIFEST.tsv
+DECISIONS.md
+PROJECT_MAP.md
+README.md
+SOFTWARE_VERSIONS.tsv
+docs/
+    README.md
+scripts/
+    README.md

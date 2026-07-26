@@ -1,0 +1,14 @@
+sample	taxon	geographic_label	platform	run_accession	read_type	reported_bases_gb	role	status	notes
+Cai	Sapria_himalayana	Thailand	ONT	TO_BE_ADDED	long	TO_BE_ADDED	reassembly	assembled	Flye v1 complete
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_01	long	68.4	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_02	long	17.7	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_03	long	21.7	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_04	long	17.4	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_05	long	14.5	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_06	long	29.5	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_07	long	31.0	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_08	long	29.3	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_09	long	30.6	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_10	long	29.5	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_11	long	32.4	reassembly	planned	One of twelve PacBio runs
+Guo	Sapria_himalayana	China	PacBio_Sequel_II	TO_BE_ADDED_12	long	31.4	reassembly	planned	One of twelve PacBio runs
