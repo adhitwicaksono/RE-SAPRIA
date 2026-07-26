@@ -1,0 +1,39 @@
+# Primary sequencing data
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+
+# Large alignments
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+
+# Large genome and graph files
+*.fasta
+*.fa
+*.fna
+*.fas
+*.gfa
+
+# Large whole-genome alignment intermediates
+*.delta
+*.1delta
+*.mdelta
+*.paf
+
+# Archives and temporary files
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Local notebooks and environment files
+.ipynb_checkpoints/
+.env
+.venv/
