@@ -82,6 +82,14 @@ Key results:
 
 The draft was accepted for short-read polishing. The original ONT reads were cleared for removal from Galaxy after mapping and coverage QC were saved.
 
+
+## Project team
+
+- **Dr. Adhityo Wicaksono (Aether Biomics, Indonesia)** — Project lead and main analyst
+- **Prof. Dr. rer. nat. Arli Aditya Parikesit (Indonesia International Institute for Life-Sciences (i3L))** — Co-supervisor
+- **Andrian Dary Fawwaz (Indonesia International Institute for Life-Sciences (i3L))** — Student research intern
+- **H.E.L.I.O.S. (Hyper-Efficient Logic & Innovation Organization System) (OpenAI ChatGPT)** — AI-assisted analysis, workflow design, interpretation, and documentation support
+
 ## Suggested citation status
 
 This repository is an active research record and should not yet be cited as a finalized genome resource.
