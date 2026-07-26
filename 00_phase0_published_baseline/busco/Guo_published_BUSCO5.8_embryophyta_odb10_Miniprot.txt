@@ -1,0 +1,32 @@
+# BUSCO version is: 5.8.0 
+# The lineage dataset is: embryophyta_odb10 (Creation date: 2024-01-08, number of genomes: 50, number of BUSCOs: 1614)
+# Summarized benchmarking in BUSCO notation for file /data/jwd07/main/000/108/827/108827831/working/input.fa
+# BUSCO was run in mode: euk_genome_min
+# Gene predictor used: miniprot
+
+	***** Results: *****
+
+	C:51.2%[S:48.7%,D:2.5%],F:4.5%,M:44.2%,n:1614,E:5.2%	   
+	827	Complete BUSCOs (C)	(of which 43 contain internal stop codons)		   
+	786	Complete and single-copy BUSCOs (S)	   
+	41	Complete and duplicated BUSCOs (D)	   
+	73	Fragmented BUSCOs (F)			   
+	714	Missing BUSCOs (M)			   
+	1614	Total BUSCO groups searched		   
+
+Assembly Statistics:
+	18718	Number of scaffolds
+	26955	Number of contigs
+	2060974854	Total length
+	1.865%	Percent gaps
+	251 KB	Scaffold N50
+	106 KB	Contigs N50
+
+
+Dependencies and versions:
+	hmmsearch: 3.4
+	bbtools: None
+	miniprot_index: 0.14-r265
+	miniprot_align: 0.14-r265
+	python: sys.version_info(major=3, minor=10, micro=16, releaselevel='final', serial=0)
+	busco: 5.8.0
