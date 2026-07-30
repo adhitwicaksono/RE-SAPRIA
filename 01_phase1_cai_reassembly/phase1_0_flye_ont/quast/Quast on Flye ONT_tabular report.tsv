@@ -1,0 +1,23 @@
+Assembly	Flye_on_dataset_5__consensus
+# contigs (>= 0 bp)	10435
+# contigs (>= 1000 bp)	9793
+# contigs (>= 5000 bp)	7883
+# contigs (>= 10000 bp)	6318
+# contigs (>= 25000 bp)	3916
+# contigs (>= 50000 bp)	2395
+Total length (>= 0 bp)	963878780
+Total length (>= 1000 bp)	963426552
+Total length (>= 5000 bp)	958217865
+Total length (>= 10000 bp)	946613481
+Total length (>= 25000 bp)	907845712
+Total length (>= 50000 bp)	853647628
+# contigs	10389
+Largest contig	8082338
+Total length	963859531
+GC (%)	28.40
+N50	1036241
+N90	43404
+auN	1715255.3
+L50	199
+L90	2692
+# N's per 100 kbp	0.00

@@ -1,0 +1,65 @@
+/usr/local/bin/quast --labels Flye_on_dataset_5__consensus -o outputdir --eukaryote --min-identity 95.0 --min-contig 500 --split-scaffolds --large --min-alignment 65 --ambiguity-usage one --ambiguity-score 0.99 --local-mis-size 200 --contig-thresholds 0,1000,5000,10000,25000,50000 --extensive-mis-size 1000 --scaffold-gap-max-size 10000 --unaligned-part-size 500 --x-for-Nx 90 /data/dnb13/galaxy_db/files/3/a/4/dataset_3a4f8231-7f12-4a9c-aa51-074ccf2c212e.dat --threads 10 --no-krona
+
+Version: 5.3.0
+
+System information:
+  OS: Linux-6.12.0-124.55.1.el10_1.x86_64-x86_64-with-glibc2.36 (linux_64)
+  Python version: 3.12.3
+  CPUs number: 256
+
+Started: 2026-07-25 12:25:14
+
+Logging to /data/jwd06/main/000/108/823/108823859/working/outputdir/quast.log
+WARNING: --ambiguity-usage was set to 'all' because not default --ambiguity-score was specified
+
+CWD: /data/jwd06/main/000/108/823/108823859/working
+Main parameters: 
+  MODE: large, threads: 10, eukaryotic: true, split scaffolds: true, min contig length: 500, \
+  min alignment length: 65, min alignment IDY: 95.0, ambiguity: all, min local misassembly length: 200, \
+  min extensive misassembly length: 1000
+
+Contigs:
+  Pre-processing...
+  /data/dnb13/galaxy_db/files/3/a/4/dataset_3a4f8231-7f12-4a9c-aa51-074ccf2c212e.dat ==> Flye_on_dataset_5__consensus
+    breaking scaffolds into contigs:
+      WARNING: nothing was broken, skipping 'Flye_on_dataset_5__consensus broken' from further analysis
+
+2026-07-25 12:26:09
+Running Basic statistics processor...
+  Contig files: 
+    Flye_on_dataset_5__consensus
+  Calculating N50 and L50...
+    Flye_on_dataset_5__consensus, N50 = 1036241, L50 = 199, auN = 1715255.3, Total length = 963859531, GC % = 28.40, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/basic_stats/Nx_plot.pdf
+  Drawing cumulative plot...
+    saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/basic_stats/GC_content_plot.pdf
+  Drawing Flye_on_dataset_5__consensus GC content plot...
+    saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/basic_stats/Flye_on_dataset_5__consensus_GC_content_plot.pdf
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2026-07-25 12:26:56
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating PDF with all tables and plots...
+  2 of 2: Creating Icarus viewers...
+Done
+
+2026-07-25 12:27:05
+RESULTS:
+  Text versions of total report are saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/report.html
+  PDF version (tables and plots) is saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/report.pdf
+  Icarus (contig browser) is saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/icarus.html
+  Log is saved to /data/jwd06/main/000/108/823/108823859/working/outputdir/quast.log
+
+Finished: 2026-07-25 12:27:05
+Elapsed time: 0:01:51.299663
+NOTICEs: 1; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
