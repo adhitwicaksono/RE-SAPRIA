@@ -380,8 +380,8 @@ If this is your first visit, these are the most useful entry points:
 | **Phase 0** | Published Cai–Guo baseline comparison | **Complete** |
 | **Phase 1** | Cai independent reassembly and polishing | **Complete** |
 | **Phase 2** | Cai mapping to Guo, variants, Cai-fixed pseudogenome | **Complete** |
-| **Phase 3** | Harmonized genome comparison | **Active** |
-| **Phase 4** | Repeat discovery and annotation | **Active / completing** |
+| **Phase 3** | Harmonized genome comparison | **Complete** |
+| **Phase 4** | Repeat discovery and annotation | **Active** |
 | **Phase 5** | Structural gene annotation and annotation-method comparison | **Active / major runs complete** |
 | **Phase 6** | Functional and comparative genomics | **Beginning** |
 | **Phase 7** | Manuscript figures, tables, methods, supplements | **Planned** |
