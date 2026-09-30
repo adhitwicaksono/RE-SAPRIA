@@ -19,6 +19,8 @@ Before this repository turns *Sapria* into gigabases, mapping percentages, and B
 | <img src="src/s_himalayana_female_chiangmai.jpg" width="380" alt="Female Sapria himalayana flower from Chiang Mai, Thailand"> | <img src="src/s_himalayana_male_chiangmai.jpg" width="380" alt="Male Sapria himalayana flower from Chiang Mai, Thailand"> |
 | Female flower, Chiang Mai, Thailand | Male flower, Chiang Mai, Thailand |
 
+The flowers are the conspicuous part of a plant whose vegetative existence is otherwise largely hidden within its host. That contrast—a spectacular flower emerging from an extraordinarily reduced parasitic body—is exactly why Rafflesiaceae have fascinated botanists for generations, and why their genomes pose such unusual evolutionary questions.
+
 That bizarre biology made Rafflesiaceae a genomic frontier. How much of the ordinary flowering-plant genetic toolkit can disappear when a plant outsources so much of its life to a host? And what happens to the DNA that remains?
 
 ### The Cai journey — the first genomic window
