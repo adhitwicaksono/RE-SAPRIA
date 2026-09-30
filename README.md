@@ -36,11 +36,16 @@ A parallel Guo Flye reconstruction was attempted but did not produce a usable co
 RE-SAPRIA is organized around three linked hypotheses:
 
 **1. Biological divergence versus genome reconstruction**
-   The striking differences between the Cai and Guo *Sapria himalayana* genome representations reflect a combination of genuine biological divergence and reconstruction-dependent effects, rather than biological variation alone. Differences in assembly span, sequence recovery, structural organization, and apparent gene content therefore need to be tested against independent read support and alternative genome representations before being interpreted biologically.
+
+The striking differences between the Cai and Guo *Sapria himalayana* genome representations reflect a combination of genuine biological divergence and reconstruction-dependent effects, rather than biological variation alone. Differences in assembly span, sequence recovery, structural organization, and apparent gene content therefore need to be tested against independent read support and alternative genome representations before being interpreted biologically.
+
 **2. Repeat architecture shapes genome annotation**
-   The extremely repeat-rich architecture of *S. himalayana* makes gene prediction unusually sensitive to repeat treatment and annotation strategy. Exposed repetitive sequence can generate inflated or fragmented gene predictions, whereas inappropriate masking may also obscure genuine repeat-containing genes. Consequently, repeat-aware annotation supported by transcriptomic and comparative evidence is required before apparent gene gain, gene loss, or structural novelty can be treated as biological.
+
+The extremely repeat-rich architecture of *S. himalayana* makes gene prediction unusually sensitive to repeat treatment and annotation strategy. Exposed repetitive sequence can generate inflated or fragmented gene predictions, whereas inappropriate masking may also obscure genuine repeat-containing genes. Consequently, repeat-aware annotation supported by transcriptomic and comparative evidence is required before apparent gene gain, gene loss, or structural novelty can be treated as biological.
 **3. Giant introns represent repeat-expanded gene space**
-   The unusually large introns found in *S. himalayana* are hypothesized to arise substantially through repeat accumulation within otherwise genuine genes, creating an expanded gene-space architecture that is particularly vulnerable to assembly and annotation errors. These giant introns may also preserve biologically informative sequence—including transposable-element relics, duplicated fragments, regulatory elements, conserved noncoding sequence, or other functional material—but such content must be demonstrated rather than assumed.
+
+The unusually large introns found in *S. himalayana* are hypothesized to arise substantially through repeat accumulation within otherwise genuine genes, creating an expanded gene-space architecture that is particularly vulnerable to assembly and annotation errors. These giant introns may also preserve biologically informative sequence—including transposable-element relics, duplicated fragments, regulatory elements, conserved noncoding sequence, or other functional material—but such content must be demonstrated rather than assumed.
+
 Together, these hypotheses predict that the apparent genomic extremity of *S. himalayana* emerges from the interaction of real evolutionary change, repeat expansion, genome reconstruction, and annotation methodology.
 
 ---
