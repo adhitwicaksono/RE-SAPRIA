@@ -124,13 +124,6 @@ Using Miniprot:
 
 The assembly span changes by more than twofold, but conserved gene recovery changes only slightly.
 
-## 7. OGI-style challenges 🧠
-
-1. Why should N50 never be interpreted alone?
-2. Why does high mapping matter?
-3. Why are 54,117 structural discrepancies not automatically 54,117 true SVs?
-4. Why does a genome assembly twice as large not automatically contain twice as many genes?
-
 > **Bioinformatics is not just running software. It is testing whether a conclusion survives different ways of looking at the data.**
 
 
