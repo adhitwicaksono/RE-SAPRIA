@@ -146,14 +146,6 @@ After removing scaffolds shorter than 1,250 bp:
 
 This is a technical rescue, not evidence that the assembly became biologically “better.”
 
-## 8. OGI practice questions
-
-1. Why can scaffold N50 and contig N50 tell different stories?
-2. Why is Cai fixed-on-Guo a useful control?
-3. How can high mapping coexist with very different assembly spans?
-4. Why are two accessions insufficient for population genomics?
-5. Why does ~50% complete BUSCO not automatically mean “half of all *Sapria* genes are gone”?
-
 > **Comparative genomics is not only about obtaining an answer. It is about testing whether the answer survives changes in representation and method.**
 
 
