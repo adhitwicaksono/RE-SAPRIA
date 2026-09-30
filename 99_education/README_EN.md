@@ -1,0 +1,70 @@
+# 99_education — RE-SAPRIA for Everyone 🌺🧬
+
+This folder is the educational entrance to RE-SAPRIA.
+
+The goal: **make the extreme genomics of *Sapria himalayana* astonishing without sacrificing scientific accuracy.**
+
+
+## Before we begin: what is *Sapria*? And who are “Cai” and “Guo”? 🌺
+
+If you already know **Rafflesia**, you have the perfect starting point.
+
+*Rafflesia* and *Sapria* are not the same plant, but both belong to the family **Rafflesiaceae**—a remarkable group of parasitic flowering plants with extremely reduced vegetative bodies that spend much of their lives hidden inside host tissue.
+
+*Rafflesia* is much more famous because of its enormous flowers. *Sapria himalayana* is a less familiar relative, but it has become one of the best genomic windows into how extreme endoparasitism can reshape a flowering plant.
+
+And one important clarification:
+
+> **“Cai” and “Guo” are not species names.**
+
+In RE-SAPRIA, **Cai** is shorthand for the dataset/assembly from the **Liming Cai et al. (2021)** study. **Guo** is shorthand for the dataset/assembly from the **Xuelian Guo et al. (2023)** study.
+
+So we are comparing **two different scientific studies of the same species: *Sapria himalayana*.**
+
+## Two scientific journeys into the *Sapria* genome
+
+### The Cai journey: from an almost invisible plant body to a genome
+
+Charles C. Davis's group at Harvard had studied Rafflesiaceae for years. One of the major challenges was easy to state but difficult to solve: **how do you build a usable genome for a plant that spends most of its life hidden inside another plant?**
+
+Liming Cai made *Sapria himalayana* a major part of his doctoral research. Together with Charles Davis, Timothy Sackton, Harvard bioinformaticians, and collaborators in Southeast Asia, the 2021 study produced one of the most complete genomic views then available for a major Rafflesiaceae lineage.
+
+The study revealed something remarkable: *Sapria* had lost many genes that are normally deeply conserved in flowering plants, yet its genome remained large and structurally unusual. The team also found evidence of horizontal gene transfer from host lineages.
+
+### The Guo journey: returning to the same species with a new dataset
+
+Two years later, **Xuelian Guo** and colleagues from the Chinese Academy of Sciences, Novogene, and collaborating institutions published **another independent genome assembly of *S. himalayana***.
+
+The Guo study was not simply a repeat of Cai. It used a different dataset and emphasized questions including flower development, flowering time, metabolism, defense, gene loss, and horizontal gene transfer.
+
+And that is where RE-SAPRIA finds its new question:
+
+> **If two teams study the same species but produce very different genome representations, which differences reflect biology—and which reflect reconstruction?**
+
+## Choose your level
+
+| Audience | File |
+|---|---|
+| **Elementary School** | [`README_ELEMENTARY.md`](README_ELEMENTARY.md) |
+| **Middle School** | [`README_MIDDLE_SCHOOL.md`](README_MIDDLE_SCHOOL.md) |
+| **High School** | [`README_HIGH_SCHOOL.md`](README_HIGH_SCHOOL.md) |
+| **General / Lay Readers** | [`README_LAYPEOPLE.md`](README_LAYPEOPLE.md) |
+| **Indonesian index** | [`README.md`](README.md) |
+
+## Current data version
+
+This version uses RE-SAPRIA results available through **Phase 3**. Phase 4 (repeat annotation) and Phase 5 (gene annotation) are still developing, so these educational pages should be updated again.
+
+## The one-sentence core idea
+
+> **A single species can produce genome representations differing by more than one billion base pairs while much of the underlying biology remains recognizably shared.**
+
+
+## Primary sources
+
+- Cai L, Arnold BJ, Xi Z, et al. (2021). *Deeply Altered Genome Architecture in the Endoparasitic Flowering Plant Sapria himalayana Griff. (Rafflesiaceae).* **Current Biology** 31:1002–1011.e9.  
+  https://doi.org/10.1016/j.cub.2020.12.045
+- Guo X, Hu X, Li J, et al. (2023). *The Sapria himalayana genome provides new insights into the lifestyle of endoparasitic plants.* **BMC Biology** 21:134.  
+  https://doi.org/10.1186/s12915-023-01620-3
+- Harvard Plant Biology Initiative (2021). *Genetic sequence for parasitic flowering plant Sapria.*  
+  https://pbi.oeb.harvard.edu/news/genetic-sequence-parasitic-flowering-plant-sapria
