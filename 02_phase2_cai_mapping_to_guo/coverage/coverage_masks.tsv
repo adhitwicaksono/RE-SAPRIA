@@ -1,0 +1,3 @@
+mask_name	definition	primary_use
+Cai_ONT_on_Guo_SUPPORTED_DP5.bed	Cai ONT depth >=5 on Guo	long-read-supported reference space
+Cai_Illumina_on_Guo_CALLABLE_DP10-100.bed	Cai Illumina depth 10-100 on Guo	callable short-read variant space

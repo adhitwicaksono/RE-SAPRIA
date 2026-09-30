@@ -1,0 +1,6 @@
+metric	value	unit_or_note
+primary_mapping_rate	97.87	%
+reference_breadth_covered	92.93	approx_%
+mean_depth	41.94	approx_x
+sequence_in_scaffolds_ge_90pct_breadth	1700000000	approx_bp
+sequence_in_completely_unsupported_scaffolds	560000	approx_bp

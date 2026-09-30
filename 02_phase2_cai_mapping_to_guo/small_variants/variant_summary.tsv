@@ -1,0 +1,11 @@
+category	count
+strict_high_confidence_total	4535955
+SNP	3704632
+indel	831323
+heterozygous_like	3377317
+homozygous_alt	1158638
+CDS	22704
+intron_only	681920
+intergenic	3831331
+repeat	4177871
+nonrepeat	358084

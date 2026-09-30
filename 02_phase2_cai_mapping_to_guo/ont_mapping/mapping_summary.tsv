@@ -1,0 +1,8 @@
+metric	value	unit_or_note
+primary_mapping_rate	92.68	%
+reference_breadth_covered	88.11	%
+mean_depth	14.4	approx_x
+supported_reference_bases	1816000000	approx_bp
+no_ONT_coverage_bases	245000000	approx_bp
+scaffolds_ge_90pct_breadth	9204	count
+scaffolds_zero_coverage	1402	count
