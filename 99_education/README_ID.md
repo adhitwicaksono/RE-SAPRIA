@@ -49,7 +49,7 @@ Dan di sinilah RE-SAPRIA lahir sebagai pertanyaan baru:
 | **SMP** | [`README_SMP.md`](README_SMP.md) |
 | **SMA** | [`README_SMA.md`](README_SMA.md) |
 | **Pembaca umum** | [`README_UMUM.md`](README_UMUM.md) |
-| **English index** | [`README_EN.md`](README_EN.md) |
+| **English index** | [`README.md`](README.md) |
 
 ## Status materi
 
