@@ -1,0 +1,8 @@
+Representation	AUGUSTUS_Complete_pct	AUGUSTUS_Fragmented_pct	AUGUSTUS_Missing_pct	Miniprot_Complete_pct	Miniprot_Fragmented_pct	Miniprot_Missing_pct	Miniprot_Complete_BUSCOs
+Guo	49.7	2.5	47.8	51.2	4.5	44.2	827
+Cai fixed-on-Guo	49.8	2.6	47.6	51.4	4.3	44.3	830
+Cai published	47.5	3.3	49.1	49.3	5.4	45.4	795
+Cai min1200	47.5	3.3	49.1	49.2	5.4	45.4	794
+Cai min1250	47.5	3.3	49.1	49.2	5.4	45.4	794
+Cai min1300	47.5	3.3	49.1	49.2	5.4	45.4	794
+Cai Flye–HyPo	47.3	3.8	48.9	50.5	4.9	44.6	815
