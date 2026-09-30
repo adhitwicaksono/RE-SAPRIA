@@ -146,14 +146,6 @@ Setelah membuang scaffold <1.250 bp:
 
 Ini adalah technical rescue, bukan bukti assembly menjadi “lebih baik”.
 
-## 8. Pertanyaan latihan OGI
-
-1. Mengapa scaffold N50 dan contig N50 bisa memberi kesan berbeda?
-2. Mengapa Cai fixed-on-Guo merupakan kontrol yang kuat?
-3. Bagaimana mapping rate tinggi dapat coexist dengan assembly span yang sangat berbeda?
-4. Mengapa dua accession tidak cukup untuk population genomics?
-5. Mengapa BUSCO ~50% tidak berarti otomatis “setengah semua gen hilang”?
-
 > **Pertanyaan utama comparative genomics bukan hanya “apa hasilnya?” tetapi “apakah hasil itu tetap bertahan ketika representasi dan metode berubah?”**
 
 
