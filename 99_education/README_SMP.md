@@ -124,13 +124,6 @@ Dengan Miniprot:
 
 Assembly span berubah lebih dari dua kali lipat, tetapi conserved gene recovery berubah sedikit.
 
-## 7. Tantangan OGI-style 🧠
-
-1. Mengapa N50 tidak boleh dibaca sendirian?
-2. Mengapa mapping rate tinggi penting?
-3. Mengapa 54.117 structural discrepancies tidak otomatis berarti 54.117 true SV?
-4. Mengapa assembly dua kali lebih besar tidak otomatis berarti dua kali lebih banyak gen?
-
 > **Bioinformatika bukan sekadar menjalankan software. Bioinformatika adalah menguji apakah suatu kesimpulan tetap benar ketika cara melihat data berubah.**
 
 
