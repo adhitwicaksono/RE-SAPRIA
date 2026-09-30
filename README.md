@@ -1,102 +1,252 @@
 # RE-SAPRIA
 
-**RE-SAPRIA** is a reproducible reassembly and comparative-genomics project for two published *Sapria himalayana* genome datasets:
+**RE-SAPRIA** is a reproducible comparative-genomics project centered on two published *Sapria himalayana* genome datasets:
 
-- **Cai dataset / Thailand accession** — Oxford Nanopore long reads with published scaffolded assembly.
-- **Guo dataset / China accession** — twelve PacBio Sequel II long-read runs plus Illumina data.
+- **Cai dataset (Thailand accession)** — Oxford Nanopore long reads with a published scaffolded assembly.
+- **Guo dataset (China accession)** — PacBio Sequel II long-read data with Illumina data and a published scaffolded assembly.
 
-The project does not treat either published assembly as unquestioned ground truth. Instead, both datasets are reprocessed through a harmonized workflow, evaluated with the same metrics, and compared at several checkpoints.
+The project asks a simple but difficult question:
 
-## Main objectives
+> **How much of the apparent genomic divergence between Cai and Guo reflects genuine biological variation, and how much reflects reconstruction- and annotation-dependent differences in an extremely repeat-rich genome?**
 
-1. Reconstruct Cai and Guo independently from their own long reads.
-2. Evaluate draft assemblies before and after short-read polishing.
-3. Compare published and reassembled genomes using identical QC and alignment procedures.
-4. build standardized repeat, structural-gene, and functional annotations.
-5. Document all decisions, failed trials, settings, and evidence in a form suitable for training, reproducibility, and manuscript preparation.
+RE-SAPRIA therefore does not treat either published assembly as unquestioned ground truth. Instead, multiple genome representations are compared under harmonized QC, repeat annotation, read mapping, variant calling, and gene-annotation workflows.
+
+---
+
+## Current genome representations
+
+The main analytical framework currently uses the following genome representations:
+
+| Representation | Description | Role |
+|---|---|---|
+| **Guo published** | Published Guo assembly, header-cleaned | Guo structural reference |
+| **Cai published** | Published Cai assembly, header-cleaned | Historical Cai representation |
+| **Cai min1250** | Published Cai assembly with scaffolds <1,250 bp removed | Published-Cai representation compatible with downstream annotation workflows |
+| **Cai Flye–HyPo** | Independent Cai ONT reassembly polished with Illumina using HyPo | Independent Cai reconstruction |
+| **Cai fixed-on-Guo** | Guo backbone carrying confident homozygous-alternate Cai alleles | Sequence-divergence control |
+
+The **Cai fixed-on-Guo** genome is an analytical pseudogenome and must not be interpreted as an independently assembled Cai genome.
+
+A parallel Guo Flye reconstruction was attempted but did not produce a usable completed assembly; the published Guo assembly therefore remains the Guo structural representation used downstream.
+
+---
+
+## Working biological model
+
+Current analyses support a working model in which the large apparent Cai–Guo divergence reflects an interaction between:
+
+1. **real sequence-level biological variation**;
+2. **differential reconstruction of a highly repetitive genome**;
+3. **repeat-expanded gene architecture**, including very large introns;
+4. **annotation sensitivity to masking and genome representation**.
+
+The project is designed to separate these effects rather than assume that assembly-size differences are directly biological.
+
+---
+
+## Current key observations
+
+### Genome representation
+
+Approximate assembly spans currently used in the project include:
+
+- **Guo published:** ~2.061 Gb
+- **Cai published:** ~1.276 Gb
+- **Cai Flye–HyPo:** ~0.966 Gb
+- **Cai fixed-on-Guo:** ~2.061 Gb
+
+The difference in assembly span is therefore large even within a single species, making reconstruction strategy a central part of the biological interpretation.
+
+### Cai read support for Guo
+
+Independent Cai reads support most of the Guo assembly.
+
+**Cai ONT → Guo**
+
+- primary mapping rate: **92.68%**
+- reference breadth covered: **88.11%**
+- mean depth: approximately **14.4×**
+
+**Cai Illumina → Guo**
+
+- primary mapping rate: **97.87%**
+- reference breadth covered: approximately **92.93%**
+- mean depth: approximately **41.94×**
+
+These results argue against interpreting the full assembly-size difference as straightforward biological genome-size divergence.
+
+### High-confidence Cai-versus-Guo sequence differences
+
+The strict small-variant set currently contains:
+
+- **4,535,955** high-confidence small variants
+- **3,704,632** SNPs
+- **831,323** indels
+- **1,158,638** homozygous-alternate calls
+
+Cai ONT reads additionally produced **54,117 PASS structural-discrepancy calls** relative to the Guo coordinate system.
+
+These are treated conservatively as accession- and reconstruction-associated differences rather than population-level variation.
+
+### Published Cai minimum-length rescue
+
+The published Cai assembly contained **128,027** FASTA records. Filtering scaffolds shorter than **1,250 bp** reduced this to **99,251** records while retaining **1,244,196,188 bp**, or **97.49%** of the original assembly span.
+
+The same three Guo RNA-seq libraries showed only a small change in mean alignment rate:
+
+- published Cai: approximately **95.24%**
+- Cai min1250: approximately **95.15%**
+
+This supports the 1,250-bp cutoff as a minimally destructive technical preprocessing step for workflows limited by extreme scaffold count.
+
+### Repeat-expanded intron architecture
+
+Using the current Guo BRAKER-derived working annotation and one representative transcript per gene:
+
+- representative transcripts: **18,448**
+- representative introns: **85,501**
+- total intronic sequence: **264.2 Mb**
+- median intron length: **145 bp**
+- maximum intron length: **160,996 bp**
+
+Only **10.53%** of representative introns exceed 10 kb, yet these introns account for approximately **73.51%** of total intronic sequence.
+
+Repeat occupancy increases strongly with intron length, with a Spearman correlation of approximately **ρ = 0.740** between intron length and repeat fraction.
+
+This supports the interpretation that extreme intron expansion in Guo is strongly associated with repeat accumulation.
+
+### Annotation sensitivity
+
+A controlled AUGUSTUS experiment using the same trained Guo gene model produced:
+
+| Condition | Predicted genes |
+|---|---:|
+| Guo unmasked | **106,782** |
+| Guo softmasked | **30,906** |
+
+The same experiment produced:
+
+- unmasked: **434,794 CDS features**
+- softmasked: **153,165 CDS features**
+
+This demonstrates strong sensitivity of AUGUSTUS gene prediction to repeat visibility in the Guo genome.
+
+Helixer, using its land-plant model, produced **13,175 genes** and returned identical predictions on Guo softmasked and unmasked inputs, indicating that softmasking does not alter prediction in this implementation.
+
+These annotation comparisons are being used as complementary tests of how robust gene inference is in an extremely repeat-rich parasitic-plant genome.
+
+---
 
 ## Repository philosophy
 
-This repository is an **analysis notebook and provenance record**, not a polished software package.
+This repository is an **analysis notebook, provenance record, and manuscript-development workspace**, not a polished software package.
 
-Large primary data are not stored here. The repository should contain:
+It is intended to preserve:
 
-- accession manifests;
-- Galaxy commands and histories;
+- analysis decisions;
 - software versions;
-- small QC outputs;
-- summary tables;
+- Galaxy workflows and command histories;
+- compact QC outputs;
+- summary statistics;
 - scripts;
-- plots;
-- decisions and interpretations;
-- manuscript-ready materials.
+- figures;
+- failed major analytical branches;
+- interpretation notes;
+- manuscript-ready tables and figures.
 
-Do not upload raw FASTQ, BAM, full genome FASTA, or other very large files.
+Large primary or intermediate datasets such as FASTQ, BAM, full genome FASTA, and very large repeat catalogues should be deposited in archival storage such as **Zenodo** and linked from the corresponding repository folder.
+
+---
 
 ## Phase map
 
 | Phase | Scope | Status |
 |---|---|---|
-| Phase 0 | Published Cai and Guo baseline comparison | Complete |
-| Phase 1.0 | Cai ONT Flye draft assembly | Complete |
-| Phase 1.1 | Cai Illumina polishing | Planned |
-| Phase 1.2 | Cai final assembly selection | Planned |
-| Phase 2.0 | Guo PacBio Flye draft assembly | Planned |
-| Phase 2.1 | Guo Illumina polishing | Planned |
-| Phase 2.2 | Guo final assembly selection | Planned |
-| Phase 3 | Harmonized Cai–Guo comparison | Planned |
-| Phase 4 | Repeat annotation | Planned |
-| Phase 5 | Structural gene annotation | Planned |
-| Phase 6 | Functional and comparative genomics | Planned |
-| Phase 7 | Manuscript and supplementary outputs | Planned |
-| Track 90 | Andrian exploratory internship analyses | Active |
+| **Phase 0** | Published Cai and Guo baseline comparison | Complete |
+| **Phase 1** | Cai reassembly and polishing | Complete |
+| **Phase 2** | Cai mapping to Guo, support analysis, variants, Cai-fixed pseudogenome | Complete |
+| **Phase 3** | Harmonized comparison of genome representations | Active |
+| **Phase 4** | Repeat discovery and repeat annotation | Active / completing |
+| **Phase 5** | Structural gene annotation and annotation-method comparison | Active / major runs complete |
+| **Phase 6** | Functional and comparative genomics | Planned / beginning |
+| **Phase 7** | Manuscript figures, tables, methods, supplementary outputs | Planned |
+| **Track 90** | Andrian exploratory internship analyses | Active / archival |
 
-## Current Cai Flye checkpoint
+---
 
-The first Cai ONT Flye draft was generated in Galaxy with Flye 2.9.6:
+## Repository structure
 
-```bash
-flye --nano-raw input_0.fastq.gz -o out_dir -t ${GALAXY_SLOTS:-4} -i 1
+```text
+00_phase0_published_baseline/
+01_phase1_cai_reassembly/
+02_phase2_cai_mapping_to_guo/
+03_phase3_harmonized_comparison/
+04_phase4_repeat_annotation/
+05_phase5_gene_annotation/
+06_phase6_functional_comparative_genomics/
+07_phase7_manuscript_outputs/
+90_andrian_exploratory/
+docs/
+scripts/
 ```
 
-No genome-size estimate was supplied.
+The numbered phases represent the manuscript-grade analytical stream. Exploratory work remains separated under `90_andrian_exploratory/` until reproduced, quality-checked, and judged relevant to the main analysis.
 
-Key results:
+---
 
-| Metric | Cai Flye v1 |
-|---|---:|
-| Assembly span | 963,878,780 bp |
-| Contigs | 10,435 |
-| Largest contig | 8,082,338 bp |
-| Contig N50 | 1,036,241 bp |
-| L50 | 199 |
-| GC | 28.4% |
-| BUSCO, AUGUSTUS | C:31.0%, F:6.5%, M:62.5% |
-| BUSCO, Miniprot | C:49.8%, F:4.2%, M:46.0% |
-| Miniprot BUSCOs with internal stops | 109 |
-| Primary ONT read mapping | 92.40% |
-| Overall mapped alignment records | 96.91% |
-| Assembly breadth covered by ONT reads | 99.895% |
-| Genome-wide mean depth | 31.13× |
-| Main long-contig depth | approximately 13–15× |
+## Main analytical contrasts
 
-The draft was accepted for short-read polishing. The original ONT reads were cleared for removal from Galaxy after mapping and coverage QC were saved.
+Several contrasts are intentionally built into the project.
 
+### Biological sequence divergence
+
+**Guo vs Cai fixed-on-Guo**
+
+This comparison holds the Guo structural backbone largely constant while introducing confident Cai fixed alleles.
+
+### Reconstruction effect
+
+**Guo / Cai fixed-on-Guo vs Cai Flye–HyPo**
+
+This contrast tests how much apparent difference emerges when Cai is represented by an independent long-read reconstruction.
+
+### Historical published representation
+
+**Published Cai vs Cai min1250 vs Cai Flye–HyPo**
+
+This comparison helps distinguish properties of the original published assembly from properties that remain after minimal filtering or full reassembly.
+
+### Repeat-treatment effect
+
+Controlled gene-prediction comparisons on Guo test the effect of exposing or masking repetitive sequence while holding the prediction model constant.
+
+---
+
+## Interpretation limits
+
+The Cai and Guo datasets represent **two accessions**, not population samples.
+
+Accordingly:
+
+- sequence differences should not be generalized as species-wide polymorphism;
+- Thailand-versus-China regional adaptation cannot be inferred from these two accessions;
+- structural discrepancies should not automatically be treated as biological structural variants;
+- unsupported regions should not automatically be called accession-specific sequence;
+- assembly-size differences must not be interpreted directly as genome-size differences without orthogonal evidence;
+- annotation differences must be interpreted in the context of masking, reconstruction, evidence type, and predictor behavior.
+
+The project therefore distinguishes as carefully as possible between **biological divergence**, **reconstruction-associated differences**, and **annotation-dependent differences**.
+
+---
 
 ## Project team
 
-- **Dr. Adhityo Wicaksono (Aether Biomics, Indonesia)** — Project lead and main analyst
-- **Prof. Dr. rer. nat. Arli Aditya Parikesit (Indonesia International Institute for Life-Sciences (i3L))** — Co-supervisor
-- **Andrian Dary Fawwaz (Indonesia International Institute for Life-Sciences (i3L))** — Student research intern
-- **H.E.L.I.O.S. (Hyper-Efficient Logic & Innovation Organization System) (OpenAI ChatGPT)** — AI-assisted analysis, workflow design, interpretation, and documentation support
+- **Dr. Adhityo Wicaksono (Aether Biomics, Indonesia)** — Project lead, conceptualization, main analysis, interpretation, and manuscript development
+- **Prof. Dr. rer. nat. Arli Aditya Parikesit (Indonesia International Institute for Life-Sciences, i3L)** — Co-supervisor
+- **Andrian Dary Fawwaz (Indonesia International Institute for Life-Sciences, i3L)** — Student research intern
+- **H.E.L.I.O.S. (OpenAI ChatGPT)** — AI-assisted workflow design, analysis support, interpretation, and documentation
 
-## Suggested citation status
-
-This repository is an active research record and should not yet be cited as a finalized genome resource.
-
-## Maintainer
-
-Adhityo Wicaksono
+---
 
 ## Primary source publications
 
@@ -106,12 +256,32 @@ The two published *Sapria himalayana* genome resources reanalyzed in RE-SAPRIA o
 
 2. Guo X, et al. (2023). The *Sapria himalayana* genome provides new insights into the lifestyle of endoparasitic plants. *BMC Biology* 21:134. https://doi.org/10.1186/s12915-023-01620-3
 
-These publications should be cited when using, discussing, or redistributing analyses derived from the corresponding published assemblies or sequencing datasets.
+These source publications should be cited when using, discussing, or redistributing analyses derived from the corresponding published assemblies or sequencing datasets.
+
+---
+
+## Citation status
+
+This repository is an active research record and should not yet be cited as a finalized genome resource.
+
+A stable archival dataset and formal citation will be provided as the project reaches manuscript-ready status.
+
+---
 
 ## License
 
-This repository is licensed under **MIT License**.
+This repository is licensed under the **MIT License**.
+
+---
+
+## Maintainer
+
+**Adhityo Wicaksono**
+
+---
 
 ## Disclaimer
 
-Two accessions do not represent species-wide populations or regional adaptation. Assembly differences must not be interpreted automatically as biological structural variation without orthogonal validation.
+RE-SAPRIA is designed to investigate why multiple representations of the same extreme parasitic-plant genome can differ so dramatically.
+
+The central aim is not to declare one assembly or one annotation universally “correct,” but to determine which differences are robust to independent read evidence, genome reconstruction, repeat treatment, and annotation strategy.
