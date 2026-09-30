@@ -1,3 +1,0 @@
-# Unaligned Sequences
-
-Store compact harmonized comparison outputs here. Keep exact reference/query orientation in every filename and README.
