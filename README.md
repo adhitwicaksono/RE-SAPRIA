@@ -23,6 +23,15 @@ Yet independent Cai reads still recognize most of the much larger Guo assembly:
 | Illumina primary mapping rate | **97.87%** |
 | Illumina reference breadth covered | **~92.93%** |
 
+There is a second twist: **conserved gene recovery barely tracks the enormous difference in assembly span**.
+
+Across representations spanning approximately **0.966–2.061 Gb**, complete BUSCO recovery remains in a relatively narrow range:
+
+- **AUGUSTUS:** **47.3–49.8% complete**
+- **Miniprot:** **49.2–51.4% complete**
+
+The smallest independent reconstruction therefore does not show a proportional collapse of conserved gene space.
+
 So the central question is **not** simply:
 
 > Why are the Cai and Guo genomes different?
@@ -231,7 +240,39 @@ Its higher N50 after filtering is a mathematical consequence of removing short r
 
 ---
 
-## 5. Annotation itself becomes an experimental variable
+## 5. Conserved gene recovery stays unexpectedly stable across radically different genome spans
+
+All harmonized BUSCO analyses used **BUSCO 5.8.0** with `embryophyta_odb10` (**n = 1,614**) [8], evaluated independently with AUGUSTUS and Miniprot [9].
+
+| Representation | AUGUSTUS C / F / M | Miniprot C / F / M | Miniprot complete BUSCOs |
+|---|---:|---:|---:|
+| **Guo** | **49.7 / 2.5 / 47.8%** | **51.2 / 4.5 / 44.2%** | **827** |
+| **Cai fixed-on-Guo** | **49.8 / 2.6 / 47.6%** | **51.4 / 4.3 / 44.3%** | **830** |
+| **Cai published** | **47.5 / 3.3 / 49.1%** | **49.3 / 5.4 / 45.4%** | **795** |
+| **Cai min1200** | **47.5 / 3.3 / 49.1%** | **49.2 / 5.4 / 45.4%** | **794** |
+| **Cai min1250** | **47.5 / 3.3 / 49.1%** | **49.2 / 5.4 / 45.4%** | **794** |
+| **Cai min1300** | **47.5 / 3.3 / 49.1%** | **49.2 / 5.4 / 45.4%** | **794** |
+| **Cai Flye–HyPo** | **47.3 / 3.8 / 48.9%** | **50.5 / 4.9 / 44.6%** | **815** |
+
+![BUSCO completeness by AUGUSTUS](03_phase3_harmonized_comparison/assembly_qc/busco/busco_augustus_stacked_bar.png)
+
+![BUSCO completeness by Miniprot](03_phase3_harmonized_comparison/assembly_qc/busco/busco_miniprot_stacked_bar.png)
+
+Three controls matter here.
+
+First, **Guo and Cai fixed-on-Guo are nearly indistinguishable**: 802 versus 803 complete AUGUSTUS BUSCOs and 827 versus 830 complete Miniprot BUSCOs. Replacing confident fixed Cai alleles on the Guo backbone therefore barely changes conserved-gene recovery.
+
+Second, **the 1,250-bp Cai filter is strongly validated**. Published Cai and all three filtered derivatives have identical AUGUSTUS BUSCO profiles; Miniprot changes from 795 complete BUSCOs in published Cai to 794 in the filtered assemblies. The technical filter therefore crosses the practical <100,000-record threshold while preserving essentially all BUSCO-detectable conserved gene space.
+
+Third, **Cai Flye–HyPo is much smaller without showing proportional loss of conserved genes**. Miniprot recovers 815 complete BUSCOs from the ~0.966-Gb reconstruction versus 795 from the ~1.276-Gb published Cai assembly, while AUGUSTUS remains essentially stable (764 versus 767 complete BUSCOs).
+
+BUSCO does **not** tell us that the missing ~50% is purely biological gene loss. Missing BUSCOs in this system can reflect true loss, extreme divergence, fragmentation, giant gene architecture, or predictor/alignment limitations. The point is different: enormous changes in recovered DNA span do not translate into equally enormous changes in recognizable conserved gene space.
+
+Detailed outputs are available in [`03_phase3_harmonized_comparison/assembly_qc/busco/`](03_phase3_harmonized_comparison/assembly_qc/busco/).
+
+---
+
+## 6. Annotation itself becomes an experimental variable
 
 RE-SAPRIA deliberately compares annotation strategies rather than treating gene prediction as a black box.
 
@@ -435,6 +476,12 @@ That distinction matters more than choosing a single winning assembly.
 
 7. **Holst F, Bolger AM, Kindel F, et al. (2026).** Helixer: ab initio prediction of primary eukaryotic gene models combining deep learning and a hidden Markov model. *Nature Methods* 23:732–739.  
    DOI: https://doi.org/10.1038/s41592-025-02939-1
+
+8. **Manni M, Berkeley MR, Seppey M, Simão FA, Zdobnov EM. (2021).** BUSCO Update: Novel and Streamlined Workflows along with Broader and Deeper Phylogenetic Coverage for Scoring of Eukaryotic, Prokaryotic, and Viral Genomes. *Molecular Biology and Evolution* 38:4647–4654.  
+   DOI: https://doi.org/10.1093/molbev/msab199
+
+9. **Li H. (2023).** Protein-to-genome alignment with miniprot. *Bioinformatics* 39:btad014.  
+   DOI: https://doi.org/10.1093/bioinformatics/btad014
 
 ---
 
