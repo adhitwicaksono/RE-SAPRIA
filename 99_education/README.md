@@ -49,7 +49,7 @@ And that is where RE-SAPRIA finds its new question:
 | **Middle School** | [`README_MIDDLE_SCHOOL.md`](README_MIDDLE_SCHOOL.md) |
 | **High School** | [`README_HIGH_SCHOOL.md`](README_HIGH_SCHOOL.md) |
 | **General / Lay Readers** | [`README_LAYPEOPLE.md`](README_LAYPEOPLE.md) |
-| **Indonesian index** | [`README.md`](README.md) |
+| **Indonesian index** | [`README_ID.md`](README_ID.md) |
 
 ## Current data version
 
