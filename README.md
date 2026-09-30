@@ -2,7 +2,33 @@
 
 ## One species. Three genome representations. More than 1 Gb of disagreement.
 
-**RE-SAPRIA** is a comparative-genomics project built around an unusually difficult biological and computational problem: two published genome projects for the endoparasitic plant *Sapria himalayana* produced dramatically different representations of the same species, and an independent Cai reassembly produced a third.
+**RE-SAPRIA** is a comparative-genomics project built around an unusually difficult biological and computational problem: two published genome projects for the endoparasitic plant *Sapria himalayana* produced dramatically different representations of the same species, and an independent reconstruction of one dataset produced a third.
+
+## Before the numbers: meet *Sapria* — and meet Cai and Guo
+
+If **Rafflesia** is the Rafflesiaceae member you already know, *Sapria* is one of its less famous relatives.
+
+*Sapria himalayana* is **not a species of Rafflesia**, but both genera belong to the family **Rafflesiaceae**. These plants represent an extreme form of endoparasitism: most of the vegetative plant body is reduced and embedded within the tissues of a host vine, while the flower is the spectacular part that eventually emerges. In *Sapria*, the flower is roughly dinner-plate sized; in its more famous relative *Rafflesia*, flowers can become much larger [1,3,4].
+
+That bizarre biology made Rafflesiaceae a genomic frontier. How much of the ordinary flowering-plant genetic toolkit can disappear when a plant outsources so much of its life to a host? And what happens to the DNA that remains?
+
+### The Cai journey — the first genomic window
+
+In 2021, **Liming Cai and colleagues**, in a Harvard-led collaboration including **Charles C. Davis** and **Timothy B. Sackton** together with collaborators in Southeast Asia and elsewhere, published *Deeply Altered Genome Architecture in the Endoparasitic Flowering Plant Sapria himalayana* in *Current Biology* [1].
+
+That study showed just how far a flowering-plant genome could be remodeled under extreme parasitism: extensive conserved-gene loss, extraordinary intron architecture, and substantial host-to-parasite horizontal gene transfer. In this repository, **“Cai”** is shorthand for the accession, sequencing data, and published genome representation originating from that study.
+
+### The Guo journey — a second independent view
+
+In 2023, **Xuelian Guo, Xiaodi Hu, and colleagues** from the Institute of Botany, Chinese Academy of Sciences, Novogene Bioinformatics Institute, Xishuangbanna Tropical Botanical Garden, and collaborating groups published another independent *S. himalayana* genome in *BMC Biology* [2].
+
+That study approached the same extraordinary species with a different dataset and investigated its reduced body plan, flower development, metabolism, defense, gene loss, and horizontal gene transfer. In this repository, **“Guo”** is shorthand for the accession, sequencing data, and published genome representation originating from that study.
+
+> **Cai and Guo are therefore not two species. They are two independently studied accessions and two published genomic views of the same species, *Sapria himalayana*.**
+
+RE-SAPRIA begins where those two journeys meet.
+
+Two independent studies produced genomes that agree strongly in some places but differ spectacularly in others. Rather than immediately declaring one representation “right” and the other “wrong,” RE-SAPRIA asks what the disagreement itself can teach us.
 
 ### The 30-second paradox
 
@@ -370,6 +396,7 @@ If this is your first visit, these are the most useful entry points:
 | Giant introns and functional/comparative genomics | [`06_phase6_functional_comparative_genomics/`](06_phase6_functional_comparative_genomics/) |
 | Manuscript-ready figures, tables, and supplements | [`07_phase7_manuscript_outputs/`](07_phase7_manuscript_outputs/) |
 | Exploratory internship analyses | [`90_andrian_exploratory/`](90_andrian_exploratory/) |
+| Student and public introductions to the project | [`99_education/`](99_education/) |
 
 ---
 
@@ -381,7 +408,7 @@ If this is your first visit, these are the most useful entry points:
 | **Phase 1** | Cai independent reassembly and polishing | **Complete** |
 | **Phase 2** | Cai mapping to Guo, variants, Cai-fixed pseudogenome | **Complete** |
 | **Phase 3** | Harmonized genome comparison | **Complete** |
-| **Phase 4** | Repeat discovery and annotation | **Active** |
+| **Phase 4** | Repeat discovery and annotation | **Active / completing** |
 | **Phase 5** | Structural gene annotation and annotation-method comparison | **Active / major runs complete** |
 | **Phase 6** | Functional and comparative genomics | **Beginning** |
 | **Phase 7** | Manuscript figures, tables, methods, supplements | **Planned** |
