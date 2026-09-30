@@ -10,6 +10,15 @@ If **Rafflesia** is the Rafflesiaceae member you already know, *Sapria* is one o
 
 *Sapria himalayana* is **not a species of Rafflesia**, but both genera belong to the family **Rafflesiaceae**. These plants represent an extreme form of endoparasitism: most of the vegetative plant body is reduced and embedded within the tissues of a host vine, while the flower is the spectacular part that eventually emerges. In *Sapria*, the flower is roughly dinner-plate sized; in its more famous relative *Rafflesia*, flowers can become much larger [1,3,4].
 
+### Meet the organism behind the numbers
+
+Before this repository turns *Sapria* into gigabases, mapping percentages, and BUSCO scores, this is the organism itself.
+
+| Female *S. himalayana* | Male *S. himalayana* |
+|:---:|:---:|
+| <img src="src/s_himalayana_female_chiangmai.jpg" width="380" alt="Female Sapria himalayana flower from Chiang Mai, Thailand"> | <img src="src/s_himalayana_male_chiangmai.jpg" width="380" alt="Male Sapria himalayana flower from Chiang Mai, Thailand"> |
+| Female flower, Chiang Mai, Thailand | Male flower, Chiang Mai, Thailand |
+
 That bizarre biology made Rafflesiaceae a genomic frontier. How much of the ordinary flowering-plant genetic toolkit can disappear when a plant outsources so much of its life to a host? And what happens to the DNA that remains?
 
 ### The Cai journey — the first genomic window
