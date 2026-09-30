@@ -11,7 +11,9 @@ The phase compares:
 - the published **Cai assembly**, representing the Thailand accession;
 - the published **Guo assembly**, representing the China accession.
 
-The purpose is not to treat either assembly as a perfect reference. Instead, Phase 0 documents their reported construction, basic structural properties, conserved gene-space recovery, and whole-assembly correspondence under consistent analysis settings.
+The purpose is not to treat either assembly as a perfect reference. Instead, Phase 0 documents their reported construction, structural properties, conserved gene-space recovery, and whole-assembly correspondence under consistent analysis settings.
+
+---
 
 ## Scope completed
 
@@ -19,10 +21,12 @@ The purpose is not to treat either assembly as a perfect reference. Instead, Pha
 - assembly-statistic extraction through BUSCO reports;
 - BUSCO 5.8.0 benchmarking with AUGUSTUS and Miniprot;
 - broad Galaxy NUCmer visualization;
-- strict local NUCmer analysis on Gargantua;
+- strict local NUCmer analysis;
 - many-to-many and one-to-one MUMmerplots;
 - DNAdiff quantitative comparison;
-- interpretation of filtering, fragmentation, repeats, and layout effects.
+- interpretation of filtering, fragmentation, repeats, gaps, and layout effects.
+
+---
 
 ## Input assemblies
 
@@ -33,22 +37,37 @@ The purpose is not to treat either assembly as a perfect reference. Instead, Pha
 
 `TH` and `CN` identify the sampled accessions and must not be interpreted as population-level representation.
 
+---
+
 ## Published assembly statistics
 
 | Metric | Cai published | Guo published |
 |---|---:|---:|
-| Total span | 1,276,270,856 bp | 2,060,974,854 bp |
-| Scaffolds | 128,027 | 18,718 |
-| Contigs | 216,625 | 26,955 |
-| Gap content | 7.319% | 1.865% |
-| Scaffold N50 | 952 kb | 251 kb |
-| Contig N50 | 19 kb | 106 kb |
+| Total span | **1,276,270,856 bp** | **2,060,974,854 bp** |
+| Scaffold records | **128,027** | **18,718** |
+| BUSCO-reported contigs | **216,625** | **26,955** |
+| Gap content | **7.319%** | **1.865%** |
+| Scaffold N50 | **952 kb** | **251 kb** |
+| Contig N50 | **19 kb** | **106 kb** |
 
-### Structural interpretation
+### Why scaffolds and contigs differ
 
-The Cai scaffold N50 is larger than the Guo scaffold N50, but Cai has a much smaller contig N50 and substantially more gap sequence. This demonstrates why scaffold N50 alone can be misleading: scaffold joins can inflate apparent continuity while the underlying gap-free sequence remains fragmented.
+The FASTA files contain scaffold records. BUSCO's assembly-statistics routine also estimates contiguous sequence blocks after splitting scaffolds at gap runs (`N`s).
 
-Guo is much larger and less fragmented at the contig level, but neither assembly is chromosome-scale.
+Therefore:
+
+- **scaffold count** corresponds to FASTA records;
+- **contig count** corresponds to gap-free sequence blocks within those scaffold records.
+
+This distinction matters strongly for Cai.
+
+Published Cai has a higher scaffold N50 than Guo (**952 kb vs 251 kb**), but a much lower contig N50 (**19 kb vs 106 kb**) and considerably more gap sequence (**7.319% vs 1.865%**).
+
+Thus, Cai's apparently high scaffold continuity does not imply equally high gap-free sequence continuity.
+
+This baseline becomes especially informative when compared later with the independent Cai Flye–HyPo assembly, which contains **10,435 gap-free contigs, 0 Ns, and an N50 of approximately 1.056 Mb**.
+
+---
 
 ## BUSCO comparison
 
@@ -56,22 +75,24 @@ BUSCO version: **5.8.0**
 Lineage: **embryophyta_odb10**  
 BUSCO groups: **1,614**
 
-### Summary
-
 | Assembly | Predictor | Complete | Single-copy | Duplicated | Fragmented | Missing | Complete with internal stops |
 |---|---|---:|---:|---:|---:|---:|---:|
-| Cai published | AUGUSTUS | 47.5% | 46.7% | 0.9% | 3.3% | 49.1% | not reported |
-| Cai published | Miniprot | 49.3% | 48.1% | 1.1% | 5.4% | 45.4% | 47 |
-| Guo published | AUGUSTUS | 49.7% | 48.0% | 1.7% | 2.5% | 47.8% | not reported |
-| Guo published | Miniprot | 51.2% | 48.7% | 2.5% | 4.5% | 44.2% | 43 |
+| Cai published | AUGUSTUS | **47.5%** | 46.7% | 0.9% | 3.3% | 49.1% | not reported |
+| Cai published | Miniprot | **49.3%** | 48.1% | 1.1% | 5.4% | 45.4% | 47 |
+| Guo published | AUGUSTUS | **49.7%** | 48.0% | 1.7% | 2.5% | 47.8% | not reported |
+| Guo published | Miniprot | **51.2%** | 48.7% | 2.5% | 4.5% | 44.2% | 43 |
 
 ### Interpretation
 
-The two assemblies recover broadly similar conserved plant gene space despite their large difference in assembly span. Guo scores modestly higher under both predictors, but neither assembly approaches the BUSCO completeness expected for a high-quality model-plant reference.
+The two published assemblies recover broadly similar conserved plant gene space despite their large difference in assembled span.
 
-The close agreement between AUGUSTUS and Miniprot in both published assemblies contrasts with the much larger predictor gap later observed in the unpolished Cai Flye draft. This makes the published assemblies useful empirical controls for evaluating base-level polishing.
+Guo scores modestly higher under both predictors, but the much larger difference in assembly span is not matched by a similarly large difference in BUSCO recovery.
 
-Miniprot reports internal stop codons in 47 Cai BUSCOs and 43 Guo BUSCOs. These values establish a practical baseline for later polishing comparisons.
+This is an early indication that **assembly span and conserved-gene recovery are partially decoupled in *Sapria***.
+
+BUSCO completeness is not treated as a direct measure of total biological genome completeness. Missing BUSCOs can reflect genuine gene loss, sequence divergence, fragmented gene models, extreme gene architecture, or predictor limitations.
+
+Detailed BUSCO interpretation is archived in [`busco/README.md`](busco/README.md).
 
 ### Archived BUSCO files
 
@@ -80,11 +101,13 @@ Miniprot reports internal stop codons in 47 Cai BUSCOs and 43 Guo BUSCOs. These 
 - [`Guo published — AUGUSTUS`](busco/Guo_published_BUSCO5.8_embryophyta_odb10_AUGUSTUS.txt)
 - [`Guo published — Miniprot`](busco/Guo_published_BUSCO5.8_embryophyta_odb10_Miniprot.txt)
 
+---
+
 ## Whole-assembly comparison
 
 ### NUCmer baseline
 
-The reproducible Gargantua run used:
+The reproducible run used:
 
 ```bash
 nucmer --mum -l 100 -c 500 -t 1 \
@@ -93,9 +116,11 @@ nucmer --mum -l 100 -c 500 -t 1 \
   Guo_published.fasta
 ```
 
-Cai was used as the reference because the Guo-reference orientation exceeded the local WSL memory ceiling.
+Cai was used as the reference because the Guo-reference orientation exceeded the available local memory ceiling.
 
 Complete commands are archived in [`commands/MUMmer4_commands.md`](commands/MUMmer4_commands.md).
+
+---
 
 ## Figure 1 — Broad Galaxy NUCmer plot
 
@@ -103,27 +128,33 @@ Complete commands are archived in [`commands/MUMmer4_commands.md`](commands/MUMm
 
 **Interpretation:** The broad Galaxy view is saturated by extensive repetitive, duplicated, reverse-oriented, and multiply matching sequence relationships. The very different scaffold counts—128,027 for Cai and 18,718 for Guo—plus arbitrary contig order make the plot unsuitable for direct structural interpretation.
 
-The plot is retained because it provides an important methodological lesson: a whole-genome dot plot can become visually chaotic when weakly filtered relationships from fragmented and repeat-rich assemblies are displayed together.
+The plot is retained because it illustrates an important methodological limitation: whole-genome dot plots become visually chaotic when weakly filtered relationships from fragmented and repeat-rich assemblies are displayed together.
+
+---
 
 ## Figure 2 — Strict many-to-many MUMmerplot
 
 ![Strict many-to-many MUMmerplot](figures/Phase0_Gargantua_many_to_many_MUMmerplot.png)
 
-This plot was generated from the strict NUCmer run followed by `delta-filter -m`.
+Generated from the strict NUCmer run followed by `delta-filter -m`.
 
-**Interpretation:** Many-to-many filtering retains repeated and duplicated relationships while discarding weaker alignments. The plot remains dense, but a positive-slope backbone and coherent alignment structures become visible.
+**Interpretation:** Many-to-many filtering retains repeated and duplicated relationships while discarding weaker alignments. A positive-slope backbone and coherent alignment structures become more visible, while substantial multiplicity remains.
 
-This view is useful for visualizing alignment multiplicity and assembly complexity. It is not a direct estimate of repeat percentage because individual alignment blocks may overlap.
+Cumulative many-to-many alignment length should not be interpreted as unique genome coverage because individual blocks may overlap.
+
+---
 
 ## Figure 3 — Strict one-to-one MUMmerplot
 
 ![Strict one-to-one MUMmerplot](figures/Phase0_Gargantua_strict_one_to_one_MUMmerplot.png)
 
-This plot was generated using `delta-filter -1`.
+Generated using `delta-filter -1`.
 
-**Interpretation:** One-to-one filtering removes most ambiguous repetitive matches and exposes the strongest shared assembly backbone. A prominent positive-slope chain is visible, together with a large reverse-oriented chain and residual scattered blocks.
+**Interpretation:** One-to-one filtering removes much of the ambiguous repetitive signal and exposes the strongest shared assembly backbone. A prominent positive-slope chain is visible together with reverse-oriented structure and residual scattered blocks.
 
-The reverse-oriented structure is a candidate assembly-level discordance. It is not, by itself, proof of a biological inversion. The inputs are highly fragmented, and `mummerplot --layout` reorders contigs according to alignment relationships rather than native chromosome position.
+Reverse-oriented structure is treated as **assembly-level discordance**, not automatically as a validated biological inversion. The assemblies are highly fragmented, and `mummerplot --layout` reorders contigs according to alignment relationships rather than chromosome position.
+
+---
 
 ## DNAdiff results
 
@@ -142,7 +173,7 @@ The full report is archived at:
 | Aligned bases | 991,525,524 (77.69%) | 1,365,929,127 (66.28%) |
 | Unaligned bases | 284,745,332 (22.31%) | 695,045,727 (33.72%) |
 
-The different sequence-level and base-level percentages reflect the strongly different fragmentation profiles. Guo has far fewer sequences, yet a larger fraction of its total bases remains outside aligned regions.
+The different sequence-level and base-level percentages reflect the strongly different fragmentation profiles.
 
 ### Alignment classes
 
@@ -152,9 +183,11 @@ The different sequence-level and base-level percentages reflect the strongly dif
 | Cai cumulative aligned length | 954,255,421 bp | 1,503,164,497 bp |
 | Guo cumulative aligned length | 954,247,190 bp | 1,502,394,981 bp |
 | Mean block length | ~8.41 kb | ~6.21 kb |
-| Mean identity | 99.1547% | 98.7062% |
+| Mean identity | **99.1547%** | **98.7062%** |
 
-The approximately 954 Mb one-to-one correspondence at 99.15% identity demonstrates a substantial shared sequence backbone. The much larger many-to-many cumulative length reflects repeated, duplicated, collapsed, or otherwise ambiguous relationships. Because alignments can overlap, cumulative many-to-many length must not be treated as unique genome coverage.
+The approximately **954 Mb one-to-one correspondence at 99.15% identity** demonstrates a substantial shared sequence backbone.
+
+The larger many-to-many cumulative length reflects repeated, duplicated, collapsed, or otherwise ambiguous relationships and must not be treated as unique genome coverage.
 
 ### Assembly-level discordance estimates
 
@@ -165,31 +198,41 @@ The approximately 954 Mb one-to-one correspondence at 99.15% identity demonstrat
 | Translocations / sequence switches | 11,917 | 67,583 |
 | Inversions | 1,830 | 739 |
 
-These are DNAdiff alignment-discordance estimates, not validated biological event counts. Fragmentation, repeat ambiguity, scaffold ordering, gap structure, collapsed repeats, and haplotypic redundancy can inflate all four categories.
+These are DNAdiff alignment-discordance estimates, not validated biological event counts.
+
+Fragmentation, repeat ambiguity, scaffold ordering, gap structure, collapsed repeats, and haplotypic redundancy can inflate all four categories.
 
 ### Alignment-derived nucleotide differences
 
 DNAdiff reported:
 
-- 2,799,491 SNP-like substitutions;
-- 3,937,414 indel-like differences.
+- **2,799,491** SNP-like substitutions;
+- **3,937,414** indel-like differences.
 
-These values describe differences between two independently generated assemblies. They must not be presented as population SNP or indel calls. They may combine true accession variation with sequencing errors, polishing differences, gap-associated differences, alignment ambiguity, and assembly artifacts.
+These values describe differences between two independently generated assemblies and must not be presented as population SNP or indel calls.
+
+They may combine true accession variation with sequencing errors, polishing differences, gap-associated differences, alignment ambiguity, and assembly artifacts.
+
+---
 
 ## Main Phase 0 conclusions
 
 1. The published Cai and Guo assemblies contain a strong shared sequence backbone.
-2. Guo is substantially larger and more contiguous at the contig level.
-3. The two published assemblies recover similar conserved plant gene space.
-4. Cai's scaffold N50 is inflated relative to its low contig N50 and high gap content.
-5. Raw or broadly filtered MUMmerplots are dominated by repeats and fragmentation.
-6. Strict one-to-one filtering reveals interpretable shared structure but does not reconstruct chromosomes.
-7. DNAdiff structural categories cannot be equated directly with biological rearrangements.
-8. The published assemblies provide the baseline against which the harmonized reassemblies will be judged.
+2. Guo is substantially larger and more contiguous at the **contig** level.
+3. The two published assemblies recover broadly similar conserved embryophyte gene space.
+4. Cai's high scaffold N50 masks much lower underlying contig continuity and high gap content.
+5. Assembly span and conserved-gene recovery are already partially decoupled at the published-assembly baseline.
+6. Raw or broadly filtered MUMmerplots are dominated by repeats, multiplicity, and fragmentation.
+7. Strict one-to-one filtering reveals interpretable shared sequence structure but does not reconstruct chromosomes.
+8. DNAdiff structural categories cannot be equated directly with biological rearrangements.
+9. These published assemblies provide the baseline against which later read-backed and reconstruction-aware comparisons are evaluated.
+
+---
 
 ## Completion criteria
 
 - [x] Published assembly statistics archived
+- [x] Scaffold-versus-contig distinction documented
 - [x] BUSCO AUGUSTUS comparison completed
 - [x] BUSCO Miniprot comparison completed
 - [x] Broad Galaxy plot archived
@@ -199,6 +242,8 @@ These values describe differences between two independently generated assemblies
 - [x] Commands documented
 - [x] Phase-level conclusions recorded
 
+---
+
 ## Next phase
 
-Proceed to Phase 1: Cai long-read reassembly, short-read polishing, and comparison against this published baseline.
+Proceed to **Phase 1: Cai independent reassembly and polishing**, using the published assemblies documented here as the baseline.
