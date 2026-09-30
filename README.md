@@ -24,7 +24,7 @@ In 2023, **Xuelian Guo, Xiaodi Hu, and colleagues** from the Institute of Botany
 
 That study approached the same extraordinary species with a different dataset and investigated its reduced body plan, flower development, metabolism, defense, gene loss, and horizontal gene transfer. In this repository, **“Guo”** is shorthand for the accession, sequencing data, and published genome representation originating from that study.
 
-> **Cai and Guo are therefore not two species. They are two independently studied accessions and two published genomic views of the same species, *Sapria himalayana*.**
+> **Cai and Guo, stated herein, are two independently studied accessions and two published genomic views of the same species, *Sapria himalayana*.**
 
 RE-SAPRIA begins where those two journeys meet.
 
