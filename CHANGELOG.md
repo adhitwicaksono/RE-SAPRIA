@@ -98,6 +98,7 @@
 - Confirmed strong AUGUSTUS masking sensitivity on Guo: 106,782 unmasked versus 30,906 softmasked gene predictions (3.46×).
 - Flagged the previous 18,448-transcript Guo working annotation and its repeat–intron correlation as exploratory/legacy pending recomputation against the standardized Phase 5 gene set.
 - Prepared raw GFF3 files, normalized names, SHA-256 checksums, and a metadata manifest for Zenodo deposition.
+- Archived the Phase 5A standardized BRAKER3 and AUGUSTUS structural annotations on Zenodo (DOI: 10.5281/zenodo.23072450).
 
 ### Documentation and reproducibility
 
