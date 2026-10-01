@@ -85,6 +85,19 @@
   - unmasked Guo: 106,782 predicted genes and 434,794 CDS features;
   - softmasked Guo: 30,906 predicted genes and 153,165 CDS features.
 - Retained Helixer as an orthogonal land-plant prediction control; the current Guo unmasked and softmasked runs produced identical outputs.
+- - Completed the Phase 5A comparison of four softmasked BRAKER3 annotations: Guo, Cai fixed-on-Guo, Cai min1250, and Cai Flye–HyPo.
+- Validated all supplied BRAKER/AUGUSTUS GFF3 files for coordinates, gene/transcript ID uniqueness, and Parent relationships.
+- Standardized BRAKER counts:
+  - Guo: 29,792 genes / 34,471 transcripts;
+  - Cai fixed-on-Guo: 29,887 / 34,783;
+  - Cai min1250: 20,149 / 24,733;
+  - Cai Flye–HyPo: 19,430 / 23,822.
+- Found that Cai min1250 and Cai Flye–HyPo differ by 22.3% in assembly span but only ~3.6–3.7% in BRAKER gene/transcript count.
+- Found a higher start+stop structural-completeness proxy in Cai Flye–HyPo (97.30%) than Cai min1250 (88.00%).
+- Re-baselined long-intron architecture using the standardized annotations: introns ≥10 kb comprise 9.13–11.44% of representative introns but 66.80–72.08% of representative intronic sequence.
+- Confirmed strong AUGUSTUS masking sensitivity on Guo: 106,782 unmasked versus 30,906 softmasked gene predictions (3.46×).
+- Flagged the previous 18,448-transcript Guo working annotation and its repeat–intron correlation as exploratory/legacy pending recomputation against the standardized Phase 5 gene set.
+- Prepared raw GFF3 files, normalized names, SHA-256 checksums, and a metadata manifest for Zenodo deposition.
 
 ### Documentation and reproducibility
 
