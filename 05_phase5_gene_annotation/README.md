@@ -180,7 +180,10 @@ Until those analyses are complete, the additional unmasked AUGUSTUS models shoul
 
 ## Data availability
 
-The raw Phase 5 GFF3 files are intended for Zenodo. A checksum and naming manifest is stored in:
+The raw Phase 5A GFF3 files are archived on Zenodo:
+https://doi.org/10.5281/zenodo.23072450
+
+A checksum and naming manifest is stored in:
 
 [`tables/phase5_zenodo_manifest.tsv`](tables/phase5_zenodo_manifest.tsv)
 
