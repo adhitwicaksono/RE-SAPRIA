@@ -156,24 +156,24 @@ The unusually large introns found in *S. himalayana* are hypothesized to arise s
 
 These giant introns may also preserve biologically informative material—including transposable-element relics, duplicated fragments, regulatory sequence, conserved noncoding sequence, or other evolutionary remnants—but such functions must be demonstrated rather than assumed.
 
-### Prediction
+### Standardized Phase 5 structural baseline
 
-If repeat accumulation contributes strongly to intron expansion, repeat occupancy should increase with intron length.
+The standardized softmasked BRAKER3 panel now shows that long-intron architecture is robust across genome representations.
 
-Using the current Guo BRAKER-derived working annotation and one representative transcript per gene:
+Using one representative transcript per gene, chosen by longest total CDS length:
 
-| Metric | Current value |
-|---|---:|
-| Representative transcripts | **18,448** |
-| Representative introns | **85,501** |
-| Total intronic sequence | **264.2 Mb** |
-| Median intron length | **145 bp** |
-| Maximum intron length | **160,996 bp** |
-| Introns >10 kb | **10.53%** |
-| Fraction of all intronic sequence contained in introns >10 kb | **73.51%** |
-| Spearman correlation: intron length vs repeat fraction | **ρ ≈ 0.740** |
+| Representation | Representative introns | Median intron | Introns ≥10 kb | Intronic bp inside ≥10-kb introns | Maximum intron |
+|---|---:|---:|---:|---:|---:|
+| **Guo published** | **107,624** | **194 bp** | **9.13%** | **66.80%** | **115,994 bp** |
+| **Cai fixed-on-Guo** | **116,488** | **159 bp** | **10.02%** | **70.57%** | **115,994 bp** |
+| **Cai min1250** | **81,668** | **175 bp** | **11.18%** | **71.74%** | **129,246 bp** |
+| **Cai Flye–HyPo** | **77,610** | **162 bp** | **11.44%** | **72.08%** | **105,468 bp** |
 
-The current data therefore support a strong association between **intron expansion and repeat accumulation**.
+Only ~9–11% of representative introns are at least 10 kb long, yet they contain ~67–72% of all representative intronic sequence.
+
+The earlier exploratory Guo working annotation (18,448 representative transcripts; 85,501 introns; maximum intron 160,996 bp) is retained as provenance but is no longer the standardized Phase 5 baseline.
+
+The previously calculated repeat–intron correlation therefore needs to be recomputed against the standardized annotation once Phase 4 RepeatMasker GFFs are complete. Until then, the robust result is **long-intron structural dominance**, not a finalized repeat-overlap statistic.
 
 ---
 
@@ -325,6 +325,28 @@ In our current Helixer runs, the Guo unmasked and softmasked genomes produced **
 That disagreement is useful.
 
 It means the predictors are responding differently to the same extreme genome, which turns annotation strategy into something that can be experimentally interrogated rather than merely chosen.
+
+---
+
+## 7. Standardized BRAKER annotations separate annotation scale from assembly span
+
+The four softmasked BRAKER3 runs produce:
+
+| Representation | Genes | Transcripts | Gene density |
+|---|---:|---:|---:|
+| **Guo published** | **29,792** | **34,471** | **14.46/Mb** |
+| **Cai fixed-on-Guo** | **29,887** | **34,783** | **14.50/Mb** |
+| **Cai min1250** | **20,149** | **24,733** | **16.19/Mb** |
+| **Cai Flye–HyPo** | **19,430** | **23,822** | **20.10/Mb** |
+
+Guo and Cai fixed-on-Guo remain nearly identical at global annotation scale. The two Cai structural representations also converge closely in gene and transcript number despite a 22.3% difference in assembly span.
+
+Cai Flye–HyPo additionally produces a higher structural-completeness proxy: **97.30%** of transcripts contain both explicit start- and stop-codon features, compared with **88.00%** in Cai min1250.
+
+These results reinforce the central RE-SAPRIA pattern: **annotation space does not scale linearly with assembly span**.
+
+Detailed Phase 5 analyses are archived in [`05_phase5_gene_annotation/`](05_phase5_gene_annotation/).
+
 
 ---
 
