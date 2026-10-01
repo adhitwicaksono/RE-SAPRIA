@@ -4,6 +4,8 @@
 
 **RE-SAPRIA** is a comparative-genomics project built around an unusually difficult biological and computational problem: two published genome projects for the endoparasitic plant *Sapria himalayana* produced dramatically different representations of the same species, and an independent reconstruction of one dataset produced a third.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23072450.svg)](https://doi.org/10.5281/zenodo.23072450)
+
 ## Before the numbers: meet *Sapria* — and meet Cai and Guo
 
 If **Rafflesia** is the Rafflesiaceae member you already know, *Sapria* is one of its less famous relatives.
@@ -469,6 +471,8 @@ The repository preserves the material needed to understand how each conclusion w
 Large primary and intermediate files—including raw FASTQ, large BAM files, full genome FASTA files, and very large repeat catalogues—are kept outside ordinary Git history and are intended for archival deposition such as Zenodo.
 
 Failed analyses are not silently erased. If a major branch was attempted and did not produce a usable result, that failure is documented so that the analytical history remains interpretable.
+
+The standardized Phase 5A BRAKER3 and AUGUSTUS GFF3 annotations are permanently archived on Zenodo (DOI: 10.5281/zenodo.23072450).
 
 ---
 
