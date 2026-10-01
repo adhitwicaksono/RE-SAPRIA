@@ -1,0 +1,7 @@
+feature_lines	malformed_lines	bad_coordinates	bad_strand	duplicate_gene_IDs	duplicate_transcript_IDs	unresolved_parent_IDs	annotation	representation
+214977	0	0	0	0	0	0	AUG_Guo_soft	Guo softmasked
+648358	0	0	0	0	0	0	AUG_Guo_unmasked	Guo unmasked
+662551	0	0	0	0	0	0	BRAKER_Cai_fixed	Cai fixed-on-Guo
+463653	0	0	0	0	0	0	BRAKER_Cai_HyPo	Cai Flye–HyPo
+484341	0	0	0	0	0	0	BRAKER_Cai_min1250	Cai min1250
+626687	0	0	0	0	0	0	BRAKER_Guo	Guo published

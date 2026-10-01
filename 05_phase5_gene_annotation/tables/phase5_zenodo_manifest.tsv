@@ -1,0 +1,7 @@
+key	filename	compressed_bytes	sha256	features	genes	transcripts	CDS	exons	introns	seqids_with_features	representation	recommended_zenodo_filename
+AUG_Guo_soft	Augustus on Guo-softmasked_ GTF_GFF.gff3.gz	19916796	50077a3d782e56bb5c6ab67a866b54f1d57b554f8e4779f8e87d76bd5e0ade14	214977	30906	30906	153165	0	0	8953	Guo softmasked	Guo_softmasked_AUGUSTUS_control.gff3.gz
+AUG_Guo_unmasked	Augustus on Guo-unmasked_ GTF_GFF.gff3.gz	58991934	8edb7c9500534f4593ba6639b0b082107829a37e88b19f2f6de034a44b73a2b4	648358	106782	106782	434794	0	0	16025	Guo unmasked	Guo_unmasked_AUGUSTUS_control.gff3.gz
+BRAKER_Cai_fixed	BRAKER3 on Cai fixed mapped_ GFF Annotation.gff3.gz	7356169	a75a3a2e9d7bb65875f48f22eaadd72322cd74bf75019775cebcfacb0194f5bc	662551	29887	34783	187772	187772	155442	7415	Cai fixed-on-Guo	Cai_fixed_on_Guo_softmasked_BRAKER3.gff3.gz
+BRAKER_Cai_HyPo	BRAKER3 on Cai ReAssembly_ GFF Annotation.gff3.gz	4949932	9418fa2911cab9c1510bba6c17c9282551306c7b71a7881ac6339afba2ae2cdb	463653	19430	23822	132227	132227	108961	2222	Cai Flye–HyPo	Cai_Flye_HyPo_softmasked_BRAKER3.gff3.gz
+BRAKER_Cai_min1250	BRAKER3 on Cai_minlen1250_ GFF Annotation.gff3.gz	5199106	9e47036bbb5e05589172994f87d7f240a42324d3b89a3f90a244a5b93cc282cc	484341	20149	24733	138398	138398	116760	4867	Cai min1250	Cai_min1250_softmasked_BRAKER3.gff3.gz
+BRAKER_Guo	BRAKER3 on Guo_softmasked_ GFF Annotation.gff3.gz	6960673	d7b6f06eae35847e559dc5678521cbb71b5876900d93432ad06e2eeec9fe6e0f	626687	29792	34471	176045	176045	143558	7059	Guo published	Guo_softmasked_BRAKER3.gff3.gz

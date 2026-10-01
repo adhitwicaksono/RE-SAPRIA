@@ -1,0 +1,3 @@
+annotation	genes	transcripts	gene_density_per_Mb	total_CDS_features	total_CDS_bp	CDS_features_per_gene	CDS_bp_per_gene_mean	CDS_bp_per_gene_median	gene_span_mean	gene_span_median	gene_span_p95	gene_span_max	seqids_with_predictions	representation	CDS_genome_pct
+AUG_Guo_soft	30906	30906	14.995816149826735	153165	29288958	4.955833818675985	947.6787031644341	648.0	18267.825664919434	3856.0	83659.0	431896	8953	Guo softmasked	1.4211215601760079
+AUG_Guo_unmasked	106782	106782	51.81140361453435	434794	90408639	4.07179112584518	846.6655335168849	567.0	8148.130555711637	1776.0	37817.95	224897	16025	Guo unmasked	4.386692968355838
