@@ -1,0 +1,1 @@
+Representative selection = longest extracted CDS per gene; transcript ID resolves exact CDS-length ties in this FASTA-only package.
