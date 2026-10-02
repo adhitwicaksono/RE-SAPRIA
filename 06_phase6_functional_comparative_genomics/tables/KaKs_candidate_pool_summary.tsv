@@ -1,0 +1,5 @@
+representation	representative_genes	strict_complete_sequence_level_CDS	strict_complete_pct	note
+Guo published	29792	27689	92.94105800214822	Prefilter only; Ka/Ks requires orthology + codon-aware alignment.
+Cai fixed-on-Guo	29887	27323	91.42101917221534	Prefilter only; Ka/Ks requires orthology + codon-aware alignment.
+Cai min1250	20149	17000	84.3714328254504	Prefilter only; Ka/Ks requires orthology + codon-aware alignment.
+Cai Flye–HyPo	19430	18816	96.8399382398353	Prefilter only; Ka/Ks requires orthology + codon-aware alignment.

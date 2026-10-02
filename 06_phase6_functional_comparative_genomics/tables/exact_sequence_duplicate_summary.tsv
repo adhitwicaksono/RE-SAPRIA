@@ -1,0 +1,5 @@
+representation	all_transcripts	unique_CDS_sequences_all	duplicate_CDS_transcripts_all	unique_PEP_sequences_all	duplicate_PEP_transcripts_all	representative_genes	unique_CDS_sequences_representative	duplicate_CDS_representatives	unique_PEP_sequences_representative	duplicate_PEP_representatives
+Guo published	34471	31859	2612	31739	2732	29792	27246	2546	27134	2658
+Cai fixed-on-Guo	34783	32428	2355	32331	2452	29887	27609	2278	27524	2363
+Cai min1250	24733	24463	270	24432	301	20149	19890	259	19862	287
+Cai Flye–HyPo	23822	23793	29	23788	34	19430	19405	25	19401	29
