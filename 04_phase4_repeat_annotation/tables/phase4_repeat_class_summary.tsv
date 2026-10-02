@@ -1,0 +1,91 @@
+class_name	elements	bp	pct_nonN	representation
+Retroelements	636646	741677216	36.67	Cai fixed-on-Guo
+SINEs	31913	10790890	0.53	Cai fixed-on-Guo
+Penelope	3106	1302276	0.06	Cai fixed-on-Guo
+LINEs	212446	498761113	24.66	Cai fixed-on-Guo
+LTR elements	392287	232125213	11.48	Cai fixed-on-Guo
+Ty1/Copia	233058	144109830	7.13	Cai fixed-on-Guo
+Gypsy/DIRS1	150006	84761431	4.19	Cai fixed-on-Guo
+DNA transposons	784277	425474425	21.04	Cai fixed-on-Guo
+hobo-Activator	178624	143463927	7.09	Cai fixed-on-Guo
+MULE-MuDR	4736	4228228	0.21	Cai fixed-on-Guo
+Tourist/Harbinger	6294	2688360	0.13	Cai fixed-on-Guo
+Rolling-circles	210	18159	0.0	Cai fixed-on-Guo
+Unclassified	2440958	604569333	29.89	Cai fixed-on-Guo
+Total interspersed repeats	177302325	0	87.66	Cai fixed-on-Guo
+Small RNA	33816	15292424	0.76	Cai fixed-on-Guo
+Satellites	0	0	0.0	Cai fixed-on-Guo
+Simple repeats	340591	43908657	2.17	Cai fixed-on-Guo
+Low complexity	32750	5871620	0.29	Cai fixed-on-Guo
+Retroelements	370283	311680790	32.25	Cai Flye–HyPo
+SINEs	23355	113811857	11.78	Cai Flye–HyPo
+Penelope	1057	220662	0.02	Cai Flye–HyPo
+LINEs	42841	49472775	5.12	Cai Flye–HyPo
+LTR elements	304087	148396158	15.35	Cai Flye–HyPo
+Ty1/Copia	231446	111472390	11.53	Cai Flye–HyPo
+Gypsy/DIRS1	66119	35257691	3.65	Cai Flye–HyPo
+DNA transposons	227389	189779030	19.64	Cai Flye–HyPo
+hobo-Activator	142502	137748633	14.25	Cai Flye–HyPo
+MULE-MuDR	10307	3202916	0.33	Cai Flye–HyPo
+Tourist/Harbinger	4565	2318466	0.24	Cai Flye–HyPo
+Rolling-circles	920	115242	0.01	Cai Flye–HyPo
+Unclassified	883959	251749413	26.05	Cai Flye–HyPo
+Total interspersed repeats	75342989	5	77.95	Cai Flye–HyPo
+Small RNA	24292	114502995	11.85	Cai Flye–HyPo
+Satellites	2029	1037262	0.11	Cai Flye–HyPo
+Simple repeats	196126	49186058	5.09	Cai Flye–HyPo
+Low complexity	27698	10222444	1.06	Cai Flye–HyPo
+Retroelements	475467	340115621	28.75	Cai published
+SINEs	99001	102165137	8.64	Cai published
+Penelope	3643	609966	0.05	Cai published
+LINEs	64748	73369809	6.2	Cai published
+LTR elements	311718	164580675	13.91	Cai published
+Ty1/Copia	216885	113103624	9.56	Cai published
+Gypsy/DIRS1	65638	42107919	3.56	Cai published
+DNA transposons	397466	219823613	18.58	Cai published
+hobo-Activator	91621	74502345	6.3	Cai published
+MULE-MuDR	5352	3004083	0.25	Cai published
+Tourist/Harbinger	8515	3702394	0.31	Cai published
+Rolling-circles	1187	524699	0.04	Cai published
+Unclassified	1109896	427335940	36.12	Cai published
+Total interspersed repeats	98788514	0	83.51	Cai published
+Small RNA	100147	102651086	8.68	Cai published
+Satellites	1330	948002	0.08	Cai published
+Simple repeats	227714	28470851	2.41	Cai published
+Low complexity	28486	8025248	0.68	Cai published
+Retroelements	368254	231445261	20.1	Cai min1250
+SINEs	14513	7236812	0.63	Cai min1250
+Penelope	799	225530	0.02	Cai min1250
+LINEs	71942	64370126	5.59	Cai min1250
+LTR elements	281799	159838323	13.88	Cai min1250
+Ty1/Copia	206382	109175847	9.48	Cai min1250
+Gypsy/DIRS1	57521	42874146	3.72	Cai min1250
+DNA transposons	293709	313134298	27.19	Cai min1250
+hobo-Activator	164679	94758039	8.23	Cai min1250
+MULE-MuDR	3137	2777412	0.24	Cai min1250
+Tourist/Harbinger	1748	1470683	0.13	Cai min1250
+Rolling-circles	728	336587	0.03	Cai min1250
+Unclassified	1141806	419782525	36.46	Cai min1250
+Total interspersed repeats	96458761	4	83.77	Cai min1250
+Small RNA	14372	7210991	0.63	Cai min1250
+Satellites	4065	370826	0.03	Cai min1250
+Simple repeats	229224	28443014	2.47	Cai min1250
+Low complexity	29305	7939524	0.69	Cai min1250
+Retroelements	694302	448861878	22.19	Guo published
+SINEs	220181	81868726	4.05	Guo published
+Penelope	37563	26373122	1.3	Guo published
+LINEs	118950	150521772	7.44	Guo published
+LTR elements	355171	216471380	10.7	Guo published
+Ty1/Copia	226987	133586566	6.6	Guo published
+Gypsy/DIRS1	122979	79217806	3.92	Guo published
+DNA transposons	633310	544476593	26.92	Guo published
+hobo-Activator	389208	147882182	7.31	Guo published
+MULE-MuDR	3192	3654187	0.18	Guo published
+Tourist/Harbinger	3095	1942608	0.1	Guo published
+Rolling-circles	1353	495694	0.02	Guo published
+Unclassified	2103110	742984576	36.74	Guo published
+Total interspersed repeats	176269616	9	87.15	Guo published
+Small RNA	220304	85355888	4.22	Guo published
+Satellites	329	122258	0.01	Guo published
+Simple repeats	346498	44961742	2.22	Guo published
+Low complexity	35065	6794561	0.34	Guo published

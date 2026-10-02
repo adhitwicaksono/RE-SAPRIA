@@ -1,0 +1,2 @@
+comparison	original_mask_bp_retained	min1250_mask_bp	shared_mask_bp	original_only_bp	min1250_only_bp	union_mask_bp	mask_jaccard	shared_fraction_original	shared_fraction_min1250
+Cai published vs Cai min1250 on retained repeat-bearing scaffold context	996681706	1001804675	968899019	27782687	32905656	1029587362	0.9410556643953832	0.9721248149406687	0.9671536210389515
