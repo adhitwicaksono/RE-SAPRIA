@@ -53,11 +53,35 @@ And that is where RE-SAPRIA finds its new question:
 
 ## Current data version
 
-This version uses RE-SAPRIA results available through **Phase 3**. Phase 4 (repeat annotation) and Phase 5 (gene annotation) are still developing, so these educational pages should be updated again.
+This educational set reflects the **analytically frozen RE-SAPRIA synthesis
+through Phase 7 (2026-10-04)**.
+
+The project began from the striking disagreement between published Cai and Guo
+assemblies, but its final biological focus is broader: **the genome architecture
+of *Sapria himalayana* across alternative representations.**
+
+## What RE-SAPRIA found
+
+Across the principal genome representations, approximately **84–90% of non-N
+sequence is repeat-masked**. Approximately **94–98% of the major differences in
+represented genome span are associated with repeat-rich sequence**.
+
+Repeats also penetrate gene space. Only about **9–11% of representative introns
+are at least 10 kb long, yet these long introns contain about 67–72% of all
+intronic sequence**. Introns are far more repeat-overlapped than coding sequence.
+
+Gene prediction is therefore strongly affected by how repeats are treated.
+Soft-masking is supported as the default substrate for primary structural gene
+annotation in *S. himalayana*, while unmasked annotation is useful as a
+sensitivity control.
+
+Despite large changes in represented genome span and predicted gene number,
+conserved protein-coding recovery remains comparatively stable across
+representations.
 
 ## The one-sentence core idea
 
-> **A single species can produce genome representations differing by more than one billion base pairs while much of the underlying biology remains recognizably shared.**
+> **In *Sapria himalayana*, repeat-rich DNA makes genome reconstruction and gene prediction unusually sensitive, yet a recognizable conserved coding core persists across alternative representations.**
 
 
 ## Primary sources
@@ -68,3 +92,9 @@ This version uses RE-SAPRIA results available through **Phase 3**. Phase 4 (repe
   https://doi.org/10.1186/s12915-023-01620-3
 - Harvard Plant Biology Initiative (2021). *Genetic sequence for parasitic flowering plant Sapria.*  
   https://pbi.oeb.harvard.edu/news/genetic-sequence-parasitic-flowering-plant-sapria
+
+## RE-SAPRIA project synthesis
+
+- [Phase 7 — final analytical synthesis](../07_phase7_manuscript_outputs/README.md)
+- Phase 4 repeat annotation archive: https://doi.org/10.5281/zenodo.23105473
+- Phase 5A standardized annotation archive: https://doi.org/10.5281/zenodo.23072450
