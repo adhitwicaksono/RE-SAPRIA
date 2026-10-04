@@ -1,5 +1,5 @@
 # RE-SAPRIA untuk SMP 🌺🧬
-## Satu spesies, beberapa assembly: bagaimana mungkin?
+## Satu spesies, beberapa assembly — lalu apa yang tetap sama?
 
 
 ## Sebelum mulai: *Sapria* itu siapa? Dan siapa “Cai” dan “Guo”? 🌺
@@ -126,6 +126,43 @@ Assembly span berubah lebih dari dua kali lipat, tetapi conserved gene recovery 
 
 > **Bioinformatika bukan sekadar menjalankan software. Bioinformatika adalah menguji apakah suatu kesimpulan tetap benar ketika cara melihat data berubah.**
 
+## 7. Jawabannya banyak berada pada repeat
+
+RepeatMasker menunjukkan bahwa sekitar **84–90% sequence non-N** pada
+representasi genom utama *Sapria* merupakan sequence repetitif.
+
+Yang lebih menarik, sekitar **94–98% perbedaan besar pada panjang genom yang
+direpresentasikan berkaitan dengan daerah yang kaya repeat**.
+
+Jadi perbedaan ukuran assembly tidak tersebar secara acak. Sebagian besar
+terkonsentrasi pada bagian genom yang memang paling sulit direkonstruksi:
+DNA repetitif.
+
+## 8. Repeat masuk ke dalam daerah gen
+
+Hanya sekitar **9–11% intron representatif yang panjangnya ≥10 kb**, tetapi
+intron panjang tersebut mengandung sekitar **67–72% seluruh DNA intronik**.
+
+Pada empat representasi yang dianalisis dengan pipeline yang sama, sekitar
+**73–76% sequence intron bertumpang tindih dengan repeat**, sedangkan CDS hanya
+sekitar **11–17%**.
+
+Beberapa intron bahkan lebih panjang dari **100 kb**, dan pola intron raksasa
+yang kaya repeat tetap muncul pada representasi genom yang berbeda.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## 9. Pelajaran akhirnya
+
+Pertanyaan pentingnya bukan lagi “assembly mana yang benar?”
+
+Tetapi:
+
+> **Bagian mana dari biologi *Sapria himalayana* yang tetap terlihat meskipun genomnya direkonstruksi dengan cara berbeda?**
+
+Hasil akhirnya menunjukkan genom yang sangat kaya repeat, intron yang
+mengembang akibat repeat, gene prediction yang sensitif terhadap repeat, dan
+protein-coding core konservatif yang relatif stabil.
 
 ## Sumber utama
 
