@@ -4,6 +4,36 @@ Major analytical and repository milestones for RE-SAPRIA.
 
 ---
 
+## 0.5.0 — 2026-10-04
+
+### Phase 6 complete
+
+- Completed representative CDS and protein sequence QC.
+- Completed functional annotation using:
+  - DIAMOND / Swiss-Prot;
+  - DIAMOND / NR;
+  - eggNOG-mapper;
+  - InterProScan / Pfam.
+- Completed cross-representation OrthoFinder analysis.
+- Completed BUSCO protein-mode validation.
+- Completed final integration of structural, repeat-aware, sequence-level,
+  functional, and comparative evidence.
+- Froze Phases 0–6 for manuscript development.
+- Retained candidate orphan-like proteins as exploratory observations rather
+  than making a lineage-specific gene claim without appropriate external
+  phylogenetic comparators.
+
+### Phase 7 initiated
+
+- Opened manuscript-preparation phase.
+- Defined the final manuscript around the three central RE-SAPRIA hypotheses:
+  biological divergence versus reconstruction, repeat-dependent annotation,
+  and repeat-expanded giant introns.
+- Restricted Phase 7 to manuscript synthesis, presentation, provenance, and
+  reviewer-driven follow-up rather than continued exploratory analysis.
+
+---
+
 ## 0.4.0 — 2026-10-02
 
 ### Phase 4 — repeat analysis complete
