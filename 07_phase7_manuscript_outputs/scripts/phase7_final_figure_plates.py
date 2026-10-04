@@ -30,13 +30,15 @@ SHORT4 = ["Guo", "Cai fixed", "Cai min1250", "Cai Flye–HyPo"]
 SHORT5 = ["Guo", "Cai fixed", "Cai published", "Cai min1250", "Cai Flye–HyPo"]
 
 
-def panel(ax, letter):
+def panel(ax, letter, x=-0.14, y=1.08):
     ax.text(
-        -0.10, 1.06, letter,
+        x, y, letter,
         transform=ax.transAxes,
         fontsize=14,
         fontweight="bold",
         va="top",
+        ha="left",
+        clip_on=False,
     )
 
 
@@ -45,11 +47,24 @@ def clean(ax):
     ax.spines["right"].set_visible(False)
 
 
-def save_plate(fig, basename):
-    fig.tight_layout()
-    fig.savefig(FIG / f"{basename}.png", dpi=300, bbox_inches="tight")
-    fig.savefig(FIG / f"{basename}.svg", bbox_inches="tight")
-    fig.savefig(FIG / f"{basename}.pdf", bbox_inches="tight")
+def save_plate(fig, basename, use_tight=True):
+    if use_tight:
+        fig.tight_layout(rect=[0.02, 0.02, 0.98, 0.94])
+
+    fig.savefig(
+        FIG / f"{basename}.png",
+        dpi=300,
+        bbox_inches="tight"
+    )
+    fig.savefig(
+        FIG / f"{basename}.svg",
+        bbox_inches="tight"
+    )
+    fig.savefig(
+        FIG / f"{basename}.pdf",
+        bbox_inches="tight"
+    )
+
     plt.close(fig)
 
 
@@ -204,9 +219,18 @@ ax.set_xticks(list(x), read_types)
 ax.set_ylim(0, 100)
 ax.set_ylabel("Percent")
 ax.set_title("Cai reads support Guo")
-ax.legend(frameon=False)
-clean(ax)
-panel(ax, "B")
+ax.legend(
+    frameon=False,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 1.02),
+    ncol=2,
+    borderaxespad=0,
+)
+
+ax.set_title(
+    "Cai reads support Guo",
+    pad=42
+)
 
 # C — genome BUSCO Miniprot
 ax = axes[2]
@@ -215,7 +239,10 @@ vals = [genome_busco_miniprot_complete[r] for r in SHORT5]
 bars = ax.bar(SHORT5, vals)
 ax.set_ylim(40, 55)
 ax.set_ylabel("Complete BUSCOs (%)")
-ax.set_title("Conserved gene recovery\n(genome mode, Miniprot)")
+ax.set_title(
+    "Genome BUSCO recovery\n(Miniprot)",
+    pad=8
+)
 ax.tick_params(axis="x", rotation=35)
 
 for b, v in zip(bars, vals):
@@ -235,7 +262,16 @@ fig.suptitle(
     y=1.03,
 )
 
-save_plate(fig, "Fig1_genome_representation_paradox")
+fig.subplots_adjust(
+    top=0.76,
+    wspace=0.30
+)
+
+save_plate(
+    fig,
+    "Fig1_genome_representation_paradox",
+    use_tight=False
+)
 
 write_tsv(
     TAB / "Fig1_source_data.tsv",
@@ -399,7 +435,18 @@ ax.bar(
 ax.set_xticks(list(x), SHORT4, rotation=35, ha="right")
 ax.set_ylabel("Percent")
 ax.set_title("Few long introns contain most intronic sequence")
-ax.legend(frameon=False)
+ax.legend(
+    frameon=False,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 1.01),
+    ncol=1,
+    borderaxespad=0,
+)
+
+ax.set_title(
+    "Few long introns contain most intronic sequence",
+    pad=58
+)
 clean(ax)
 panel(ax, "A")
 
@@ -423,9 +470,20 @@ ax.bar(
 ax.set_xticks(list(x), SHORT4, rotation=35, ha="right")
 ax.set_ylabel("Repeat-overlapped sequence (%)")
 ax.set_title("Repeats preferentially occupy introns")
-ax.legend(frameon=False)
+ax.legend(
+    frameon=False,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 1.01),
+    ncol=1,
+    borderaxespad=0,
+)
+
+ax.set_title(
+    "Repeats preferentially occupy introns",
+    pad=58
+)
 clean(ax)
-panel(ax, "B")
+panel(ax, "B", x=-0.18, y=1.10)
 
 # C
 ax = axes[2]
@@ -442,7 +500,10 @@ for b, v in zip(bars, rho):
 
 ax.set_ylim(0, 0.85)
 ax.set_ylabel("Spearman ρ")
-ax.set_title("Intron length versus repeat fraction")
+ax.set_title(
+    "Intron length–repeat association",
+    pad=8
+)
 ax.tick_params(axis="x", rotation=35)
 clean(ax)
 panel(ax, "C")
@@ -450,6 +511,11 @@ panel(ax, "C")
 fig.suptitle(
     "Figure 3. Repeat expansion penetrates gene space through long introns",
     y=1.03,
+)
+
+fig.subplots_adjust(
+    top=0.76,
+    wspace=0.32
 )
 
 save_plate(fig, "Fig3_repeat_expanded_gene_space")
@@ -637,9 +703,20 @@ ax.set_xticks(list(x), SHORT4, rotation=30, ha="right")
 ax.set_ylim(40, 55)
 ax.set_ylabel("Complete BUSCOs (%)")
 ax.set_title("Genome-detectable versus annotated conserved genes")
-ax.legend(frameon=False)
+ax.legend(
+    frameon=False,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 1.01),
+    ncol=1,
+    borderaxespad=0,
+)
+
+ax.set_title(
+    "Genome versus protein BUSCO",
+    pad=58
+)
 clean(ax)
-panel(ax, "B")
+panel(ax, "B", x=-0.18, y=1.10)
 
 # C — OrthoFinder assignment
 ax = axes[1][0]
@@ -664,9 +741,20 @@ ax.barh(
 ax.set_xlim(0, 100)
 ax.set_xlabel("Representative proteins (%)")
 ax.set_title("Cross-representation orthogroup assignment")
-ax.legend(frameon=False)
+ax.legend(
+    frameon=False,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 1.01),
+    ncol=2,
+    borderaxespad=0,
+)
+
+ax.set_title(
+    "Cross-representation orthogroup assignment",
+    pad=40
+)
 clean(ax)
-panel(ax, "C")
+panel(ax, "C", x=-0.14, y=1.08)
 
 # D — representation robustness
 ax = axes[1][1]
@@ -699,6 +787,13 @@ panel(ax, "D")
 fig.suptitle(
     "Figure 5. A comparatively stable coding core persists across alternative genome representations",
     y=1.01,
+)
+
+fig.subplots_adjust(
+    top=0.89,
+    bottom=0.10,
+    hspace=0.58,
+    wspace=0.28
 )
 
 save_plate(fig, "Fig5_stable_coding_core")
