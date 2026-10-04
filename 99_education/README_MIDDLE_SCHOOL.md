@@ -1,5 +1,5 @@
 # RE-SAPRIA for Middle School 🌺🧬
-## One species, several assemblies: how is that possible?
+## One species, several assemblies — and what stays the same?
 
 
 ## Before we begin: what is *Sapria*? And who are “Cai” and “Guo”? 🌺
@@ -126,6 +126,42 @@ The assembly span changes by more than twofold, but conserved gene recovery chan
 
 > **Bioinformatics is not just running software. It is testing whether a conclusion survives different ways of looking at the data.**
 
+## 7. The repeat-rich answer
+
+RepeatMasker showed that approximately **84–90% of non-N sequence** across the
+main genome representations is repetitive.
+
+Even more strikingly, approximately **94–98% of the major differences in
+represented genome span are associated with repeat-rich sequence**.
+
+So the genome-size disagreement is not distributed randomly across the genome.
+It is concentrated mainly in the part that is hardest to reconstruct:
+repetitive DNA.
+
+## 8. Repeats enter gene space
+
+Only about **9–11% of representative introns are at least 10 kb long**, but
+those long introns contain about **67–72% of all intronic DNA**.
+
+Across the standardized representations, intronic sequence is roughly
+**73–76% repeat-overlapped**, compared with only about **11–17% for CDS**.
+
+Some individual introns exceed **100 kb**, and the largest introns remain
+strongly repeat-rich across different genome representations.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## 9. The final lesson
+
+The important question is no longer “Which assembly is correct?”
+
+Instead:
+
+> **Which features of *Sapria himalayana* remain visible even when the genome is reconstructed in different ways?**
+
+The answer includes an extremely repeat-rich genome, repeat-expanded introns,
+repeat-sensitive gene prediction, and a comparatively stable conserved
+protein-coding core.
 
 ## Primary sources
 
