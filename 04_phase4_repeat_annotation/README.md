@@ -12,6 +12,8 @@ That design reflects the analysis actually performed. It also creates an importa
 
 > **Total repeat burden and coordinate-level repeat overlap are directly useful, but repeat-class differences across independently learned libraries must not automatically be interpreted as biological expansion or contraction of particular repeat families.**
 
+Raw Phase 4 GFF3 files are archived on Zenodo: https://doi.org/10.5281/zenodo.23105473
+
 ---
 
 ## 1. Repeat burden across genome representations
