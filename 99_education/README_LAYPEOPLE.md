@@ -121,7 +121,57 @@ Instead:
 
 That is the heart of RE-SAPRIA.
 
-Phase 4 and Phase 5 will add what may become the wildest part of the story: repeat architecture and gene annotation.
+## And the wild part really was the repeats
+
+Once repeat annotation was completed, the mystery became much clearer.
+
+Across the main genome representations, roughly **84–90% of the non-gap DNA**
+was classified as repetitive. Even more remarkably, about **94–98% of the major
+differences in reconstructed genome span were associated with repeat-rich
+sequence**.
+
+In other words, the disagreement between genome reconstructions was concentrated
+precisely in the part of the genome that is hardest for assembly algorithms to
+reconstruct.
+
+## The repeats are not only between genes
+
+Some of the most striking repeats occur **inside genes**, particularly within
+introns.
+
+Across several standardized genome representations, only about one in ten
+introns is longer than 10 kb, yet those long introns contain roughly two-thirds
+or more of all intronic DNA. Some individual introns exceed 100 kb and are
+mostly repetitive.
+
+Many of these extreme loci are still recognizable host genes involved in
+ordinary cellular functions such as transcription, RNA processing, DNA repair,
+transport, and metabolism.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## Even gene prediction can be fooled by repeats
+
+When the same genome was given to a gene predictor with repetitive sequence
+visible, the number of predicted genes increased dramatically.
+
+This does not mean *Sapria* suddenly gained tens of thousands of real genes.
+It shows how strongly repeat-rich DNA can affect computational gene prediction.
+
+The project therefore supports **soft-masking repetitive DNA for primary gene
+annotation**, while keeping unmasked analysis as a useful control.
+
+## The final picture
+
+RE-SAPRIA began as a disagreement between two published genome assemblies.
+
+It ends with a biological picture of *Sapria himalayana* itself:
+
+> **an extraordinarily repeat-rich genome whose overall reconstruction is highly method-sensitive, whose repeats expand deep into introns, and whose conserved protein-coding core remains much more stable than its apparent genome size.**
+
+So the question is no longer “Which assembly wins?”
+
+The disagreement was the clue.
 
 
 ## Primary sources
