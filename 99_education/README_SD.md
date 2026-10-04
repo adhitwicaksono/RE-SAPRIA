@@ -84,6 +84,35 @@ Jadi walaupun hasil assembly sangat berbeda ukuran, banyak DNA Cai masih mengena
 
 Itulah misteri RE-SAPRIA.
 
+## 🌪️ Apa yang membuat puzzle ini sangat sulit?
+
+Setelah dianalisis lebih jauh, ternyata genom *Sapria* mengandung sangat banyak
+**DNA yang berulang (repeat)**.
+
+Bayangkan sebuah buku yang memiliki kata, kalimat, atau paragraf yang muncul
+berulang-ulang. Komputer yang mencoba menyusun kembali buku itu dapat kesulitan
+menentukan posisi setiap potongan.
+
+Sebagian besar perbedaan besar antara berbagai rekonstruksi genom *Sapria*
+ternyata berada pada daerah yang kaya repeat.
+
+## 🧬 Repeat bahkan masuk ke dalam gen
+
+Gen tidak selalu berupa satu instruksi yang tersambung terus-menerus.
+
+Banyak gen tumbuhan memiliki bagian bernama **intron** di antara bagian yang
+membawa instruksi untuk membuat protein. Pada *Sapria*, beberapa intron sangat
+panjang dan dipenuhi DNA berulang.
+
+Ada intron yang panjangnya lebih dari **100.000 huruf DNA**.
+
+Meskipun begitu, bagian gen yang membawa instruksi protein masih dapat dikenali
+pada banyak kasus.
+
+Jadi misterinya bukan hanya mengapa beberapa assembly berbeda ukuran.
+*S. himalayana* memang mempunyai arsitektur genom yang sangat kaya repeat dan
+tidak biasa.
+
 ## 🕵️ Ilmuwan = detektif
 
 Kami membandingkan:
@@ -97,7 +126,7 @@ Setiap jenis data adalah **petunjuk**.
 
 ## ⭐ Pelajaran utama
 
-> **Kalau dua jawaban berbeda, ilmuwan tidak langsung memilih satu. Ilmuwan mencari tahu mengapa jawabannya berbeda.**
+> **Ilmuwan tidak memilih assembly mana yang “menang”. Perbedaan antar-rekonstruksi justru membantu kita menemukan sesuatu yang nyata tentang *Sapria*: DNA berulang membuat genomnya sangat sulit disusun, tetapi banyak instruksi gen penting tetap dapat dikenali.**
 
 ## 🤔 Coba pikirkan
 
