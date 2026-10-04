@@ -53,11 +53,35 @@ Dan di sinilah RE-SAPRIA lahir sebagai pertanyaan baru:
 
 ## Status materi
 
-Versi ini memakai hasil RE-SAPRIA yang tersedia sampai **Phase 3**. Phase 4 (repeat annotation) dan Phase 5 (gene annotation) masih berkembang, jadi folder pendidikan ini akan diperbarui lagi.
+Set materi pendidikan ini telah diperbarui mengikuti **sintesis analitik
+RE-SAPRIA yang dibekukan sampai Phase 7 (2026-10-04)**.
+
+Proyek ini bermula dari perbedaan besar antara assembly Cai dan Guo, tetapi
+fokus biologis akhirnya lebih luas: **arsitektur genom *Sapria himalayana*
+yang tetap muncul ketika genom direpresentasikan dengan beberapa cara berbeda.**
+
+## Apa yang akhirnya ditemukan RE-SAPRIA?
+
+Pada representasi genom utama, sekitar **84–90% sequence non-N terdeteksi
+sebagai repeat**. Sekitar **94–98% perbedaan besar dalam panjang genom yang
+direpresentasikan berkaitan dengan sequence yang kaya repeat**.
+
+Repeat juga masuk jauh ke dalam daerah gen. Hanya sekitar **9–11% intron
+representatif yang panjangnya ≥10 kb**, tetapi intron-intron panjang tersebut
+menampung sekitar **67–72% seluruh sequence intronik**. Sequence intron jauh
+lebih banyak bertumpang tindih dengan repeat dibandingkan CDS.
+
+Karena itu, gene prediction sangat sensitif terhadap cara repeat diperlakukan.
+Soft-masking didukung sebagai pendekatan utama untuk structural gene annotation
+*S. himalayana*, sementara annotation pada genom unmasked lebih cocok sebagai
+kontrol sensitivitas.
+
+Walaupun panjang assembly dan jumlah gen prediksi berubah besar, recovery
+protein-coding genes yang konservatif relatif stabil antar-representasi.
 
 ## Satu kalimat inti
 
-> **Satu spesies dapat menghasilkan representasi genom yang berbeda lebih dari 1 miliar pasangan basa—sementara banyak bagian biologinya masih dikenali sebagai hal yang sama.**
+> **Pada *Sapria himalayana*, DNA kaya repeat membuat rekonstruksi genom dan prediksi gen sangat sensitif terhadap metode, tetapi inti protein-coding yang konservatif tetap relatif stabil.**
 
 
 ## Sumber utama
@@ -68,3 +92,9 @@ Versi ini memakai hasil RE-SAPRIA yang tersedia sampai **Phase 3**. Phase 4 (rep
   https://doi.org/10.1186/s12915-023-01620-3
 - Harvard Plant Biology Initiative (2021). *Genetic sequence for parasitic flowering plant Sapria.*  
   https://pbi.oeb.harvard.edu/news/genetic-sequence-parasitic-flowering-plant-sapria
+
+## Sintesis proyek RE-SAPRIA
+
+- [Phase 7 — sintesis analitikal akhir](../07_phase7_manuscript_outputs/README.md)
+- Arsip anotasi *repeat* fase 4: https://doi.org/10.5281/zenodo.23105473
+- Arsip anotasi terstandar fase 5A: https://doi.org/10.5281/zenodo.23072450
