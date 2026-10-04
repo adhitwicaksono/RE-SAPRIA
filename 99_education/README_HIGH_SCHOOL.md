@@ -1,5 +1,5 @@
 # RE-SAPRIA for High School 🌺🧬
-## A genome assembly is not the genome itself
+## From assembly disagreement to repeat-expanded gene architecture
 
 
 ## Before we begin: what is *Sapria*? And who are “Cai” and “Guo”? 🌺
@@ -52,7 +52,7 @@ Largest difference ≈ **1.09 Gb**.
 
 The testable question is:
 
-> **How much Cai–Guo divergence is biological, and how much is reconstruction-dependent?**
+> **Which features of *Sapria himalayana* represent genuine biological architecture, and which apparent differences are sensitive to reconstruction and annotation strategy?**
 
 ## 2. Assembly metrics must be combined
 
@@ -148,6 +148,72 @@ This is a technical rescue, not evidence that the assembly became biologically �
 
 > **Comparative genomics is not only about obtaining an answer. It is about testing whether the answer survives changes in representation and method.**
 
+## 8. Repeat-rich sequence explains most representation-level span disagreement
+
+Across the five principal representations, RepeatMasker classified
+**84.32–90.35% of non-N sequence** as repetitive.
+
+| Comparison | Span difference associated with repeat-masked sequence |
+|---|---:|
+| Guo vs Cai published | **94.54%** |
+| Guo vs Cai min1250 | **94.01%** |
+| Guo vs Flye–HyPo | **95.23%** |
+| Cai published vs Flye–HyPo | **97.91%** |
+
+This is a representation-level decomposition. It does not prove that every
+additional repeat in one assembly is biologically present or absent in the
+other.
+
+## 9. Repeat expansion penetrates gene space
+
+Across the four standardized BRAKER representations:
+
+| Representation | Introns ≥10 kb | Intronic bp inside ≥10-kb introns | Intron repeat overlap | CDS repeat overlap |
+|---|---:|---:|---:|---:|
+| Guo | 9.13% | 66.80% | 73.45% | 14.12% |
+| Cai fixed | 10.02% | 70.57% | 76.30% | 17.41% |
+| Cai min1250 | 11.18% | 71.74% | 74.20% | 13.18% |
+| Cai Flye–HyPo | 11.44% | 72.08% | 75.49% | 11.45% |
+
+Long introns are therefore uncommon by count but dominate intronic sequence
+space and are strongly enriched for repeats.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## 10. Repeat treatment changes gene prediction
+
+A controlled AUGUSTUS comparison on the same Guo genome and trained model gave:
+
+| Condition | Predicted genes | CDS features |
+|---|---:|---:|
+| Softmasked | **30,906** | **153,165** |
+| Unmasked | **106,782** | **434,794** |
+
+Among 60,530 AUGUSTUS models found only in the unmasked prediction,
+**97.41%** had at least 50% repeat overlap across the gene span, while only
+**6.21%** overlapped the RNA-supported BRAKER annotation on the same strand.
+
+This does not prove that every unmasked-only model is false. It shows that
+exposing repeats creates a very large repeat-associated prediction space.
+
+For primary host-gene annotation in *S. himalayana*, RE-SAPRIA therefore
+supports **soft-masking as the default**, with unmasked annotation retained as a
+sensitivity control.
+
+## 11. The conserved coding core is much more stable
+
+Standardized BRAKER predictions vary from **19,430 to 29,887 genes**, but
+protein-mode complete BUSCO recovery varies only from **45.8% to 48.4%**.
+
+Cross-representation OrthoFinder assignment remains **77.7–88.4%** across the
+four representative proteomes.
+
+The emerging picture is therefore:
+
+> **extreme repeat abundance → reconstruction-sensitive genome representation → repeat-expanded introns → repeat-sensitive gene prediction → comparatively stable conserved coding space**
+
+The final object of study is not “Guo versus Cai.” It is the genome architecture
+of ***Sapria himalayana*** revealed through several alternative representations.
 
 ## Primary sources
 
