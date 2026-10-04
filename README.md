@@ -168,7 +168,7 @@ A Guo Flye reconstruction was attempted but did not yield a usable completed ass
 | Where are the repeats, and how much sequence do they explain? | [`04_phase4_repeat_annotation/`](04_phase4_repeat_annotation/) |
 | How do repeats affect gene architecture and prediction? | [`05_phase5_gene_annotation/`](05_phase5_gene_annotation/) |
 | Which robust genes and functions survive across representations? | [`06_phase6_functional_comparative_genomics/`](06_phase6_functional_comparative_genomics/) |
-| Manuscript-ready outputs | [`07_phase7_manuscript_outputs/`](07_phase7_manuscript_outputs/) |
+| Manuscript preparation and frozen analytical synthesis | [`07_phase7_manuscript_outputs/`](07_phase7_manuscript_outputs/) |
 | Andrian's exploratory internship analyses | [`90_andrian_exploratory/`](90_andrian_exploratory/) |
 | Student/public introductions | [`99_education/`](99_education/) |
 
