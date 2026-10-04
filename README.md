@@ -4,7 +4,7 @@
 
 **RE-SAPRIA** is a comparative-genomics project asking why independently generated genome representations of the endoparasitic plant *Sapria himalayana* differ so dramatically, and which biological conclusions remain stable when reconstruction, repeat treatment, and annotation strategy change.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23072450.svg)](https://doi.org/10.5281/zenodo.23072450)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23105473.svg)](https://doi.org/10.5281/zenodo.23105473) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23072450.svg)](https://doi.org/10.5281/zenodo.23072450)
 
 > **Central question:** How much of the apparent Cai–Guo genomic difference is genuine biological divergence, and how much is reconstruction- and annotation-dependent behavior in an extraordinarily repeat-rich genome?
 
@@ -227,8 +227,12 @@ RE-SAPRIA deliberately separates observation from inference.
 
 # Data availability
 
-The standardized **Phase 5A BRAKER3 and AUGUSTUS GFF3 annotations** are archived on Zenodo:
+The standardized datasets are archived on Zenodo:
 
+**Phase 4: RepeatMasker annotations**
+**DOI: [10.5281/zenodo.23105473](https://doi.org/10.5281/zenodo.23105473)**
+
+**Phase 5A BRAKER3 and AUGUSTUS GFF3 annotations**
 **DOI: [10.5281/zenodo.23072450](https://doi.org/10.5281/zenodo.23072450)**
 
 Large primary and intermediate files are intentionally kept outside ordinary Git history. GitHub stores compact summaries, scripts, figures, decision records, and interpretation.
