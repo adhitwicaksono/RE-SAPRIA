@@ -1,0 +1,5 @@
+representation	BRAKER_genes	genome_BUSCO_Miniprot_complete_pct	protein_BUSCO_complete_pct	orthogroup_assigned_pct
+Guo	29792	51.2	48.0	88.4
+Cai fixed	29887	51.4	48.4	87.8
+Cai min1250	20149	49.2	45.8	82.1
+Cai Flye–HyPo	19430	50.5	47.1	77.7

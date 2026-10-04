@@ -1,0 +1,15 @@
+metric	representation_or_read_type	value	unit
+assembly_span	Guo	2060.974854	Mb
+assembly_span	Cai fixed	2060.941893	Mb
+assembly_span	Cai published	1276.270856	Mb
+assembly_span	Cai min1250	1244.196188	Mb
+assembly_span	Cai Flye–HyPo	966.497149	Mb
+ONT_primary_mapping	ONT	92.68	percent
+ONT_reference_breadth	ONT	88.11	percent
+Illumina_primary_mapping	Illumina	97.87	percent
+Illumina_reference_breadth	Illumina	92.93	percent
+genome_BUSCO_Miniprot_complete	Guo	51.2	percent
+genome_BUSCO_Miniprot_complete	Cai fixed	51.4	percent
+genome_BUSCO_Miniprot_complete	Cai published	49.3	percent
+genome_BUSCO_Miniprot_complete	Cai min1250	49.2	percent
+genome_BUSCO_Miniprot_complete	Cai Flye–HyPo	50.5	percent
