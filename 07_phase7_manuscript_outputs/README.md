@@ -110,33 +110,80 @@ rather than being restricted to obvious transposable-element-like predictions.
 Functional labels are treated as homology-supported assignments rather than
 formal *Sapria* gene names.
 
+### Largest-intron loci in *Sapria himalayana*
+
+Guo BRAKER identifiers are used as anchor locus names for reporting. Functional
+labels are homology-supported assignments, and recurrence in the corresponding
+Top-20 largest-intron set of the three alternative representations is shown as
+cross-representation extreme support.
+
+| Rank | Anchor locus | Homology-supported functional label | Longest intron (kb) | Repeat in longest intron | CDS repeat | Alternative extreme support |
+|---:|---|---|---:|---:|---:|---:|
+| 1 | g15453 | Mediator of RNA polymerase II transcription subunit 32 | 116.0 | 74.9% | 4.25% | 2/3 |
+| 2 | g29049 | CSC1-like protein RXW8 | 106.9 | 71.7% | 0.00% | 2/3 |
+| 3 | g7602 | GATA transcription factor 26 | 104.5 | 80.6% | 0.00% | 3/3 |
+| 4 | g3944 | RNA-binding KH domain-containing protein RCF3 | 103.9 | 80.6% | 0.00% | 3/3 |
+| 5 | g827 | Aldehyde dehydrogenase family 3 member H1 | 102.1 | 83.1% | 0.00% | 3/3 |
+| 6 | g15317 | Type 2 DNA topoisomerase 6 subunit B-like | 97.7 | 87.8% | 0.00% | 3/3 |
+| 7 | g11307 | DEAD-box ATP-dependent RNA helicase 38 | 93.5 | 92.0% | 0.00% | 3/3 |
+| 8 | g14875 | Chaperone protein DnaJ 16 | 90.5 | 85.8% | 1.72% | 2/3 |
+| 9 | g14761 | SPOC-domain protein | 86.3 | 78.9% | 10.31% | 1/3 |
+| 10 | g3627 | CAAX prenyl protease 2 | 83.1 | 82.9% | 0.00% | 3/3 |
+| 11 | g8301 | Polyadenylate-binding protein 2 | 80.1 | 67.3% | 0.00% | 3/3 |
+| 12 | g7326 | BRCT domain-containing protein At4g02110-like | 79.8 | 85.2% | 6.00% | 1/3 |
+| 13 | g14398 | Squamosa promoter-binding-like protein 9 | 79.7 | 78.3% | 0.00% | 2/3 |
+| 14 | g5642 | Phosphoacetylglucosamine mutase | 78.5 | 88.4% | 1.70% | 3/3 |
+| 15 | g17642 | Bet1-like SNARE 1-1 | 76.7 | 80.4% | 0.00% | 2/3 |
+| 16 | g15911 | Cytoplasmic tRNA 2-thiolation protein 2 | 76.6 | 80.2% | 53.88% | 1/3 |
+| 17 | g10119 | Choline/ethanolaminephosphotransferase 1 | 75.2 | 76.8% | 0.00% | 1/3 |
+| 18 | g1173 | B-type cell-cycle switch protein CCS52A | 74.9 | 82.0% | 0.00% | 1/3 |
+| 19 | g3291 | DNA oxidative demethylase ALKBH2 | 74.8 | 78.4% | 2.50% | 1/3 |
+| 20 | g15364 | Uncharacterized conserved protein | 74.6 | 80.5% | 0.00% | 0/3 |
+
+**Alternative extreme support** indicates how many of the Cai fixed-on-Guo,
+Cai min1250, and Cai Flye–HyPo representations contain a member of the same
+cross-representation OrthoFinder group that also independently falls within
+that representation's Top-20 largest-intron set. Absence from the Top-20 does
+not imply absence of the corresponding gene model.
+
+Full source table:
+[`tables/Table_S_Sapria_largest_introns_crossrepresentation.tsv`](tables/Table_S_Sapria_largest_introns_crossrepresentation.tsv)
+
+### Repeat-expanded gene space across representations
+
+![Figure 3 — Repeat-expanded gene space](figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+**Figure 3. Repeat expansion penetrates *Sapria himalayana* gene space through
+long introns.** Across standardized genome representations, only a minority of
+introns exceed 10 kb, yet these long introns contain most intronic sequence.
+Intronic sequence is substantially more repeat-overlapped than CDS sequence,
+and intron length is positively associated with repeat occupancy.
+
 Representation-specific ranked tables and cross-representation support tables
 are retained as manuscript and supplementary source data.
 
 ---
 
-## Two complementary views of genome and gene-space stability
+## Genome representation and coding-space stability
 
-### Repeat burden
+### Repeat-rich sequence drives representation-level genome differences
 
-![RepeatMasker burden](../04_phase4_repeat_annotation/figures/phase4_repeat_burden_nonN.png)
+![Figure 2 — Repeat-rich sequence space](figures%20v2/png/Fig2_repeat_space.png)
 
-Across the five principal genome representations, RepeatMasker masks
-approximately **84–90% of non-N sequence**. The representation-level genome
-span differences are concentrated overwhelmingly in repeat-rich sequence.
+**Figure 2. Alternative *Sapria himalayana* genome representations differ
+primarily in repeat-rich sequence.** RepeatMasker identifies approximately
+84–90% of non-N sequence as repetitive, and approximately 94–98% of the major
+representation-level span differences are associated with repeat-masked
+sequence.
 
-### Conserved coding-space recovery
+### A comparatively stable coding core persists
 
-![BUSCO protein mode](../06_phase6_functional_comparative_genomics/figures/phase6_busco_protein_mode.png)
+![Figure 5 — Stable coding core](figures%20v2/png/Fig5_stable_coding_core.png)
 
-Despite large differences in assembly span and predicted gene number,
-protein-mode BUSCO recovery remains comparatively stable across the four
-standardized BRAKER proteomes.
-
-Together, these observations summarize one of the central contrasts emerging
-from RE-SAPRIA: **whole-genome representation is highly sensitive to repeat-rich
-sequence, whereas the recoverable conserved protein-coding core is much more
-stable.**
+**Figure 5. Conserved coding space is substantially more stable than whole-genome
+representation.** Standardized BRAKER annotations differ in total gene number,
+but protein-mode BUSCO recovery and cross-representation orthogroup structure
+identify a comparatively stable conserved coding core.
 
 ---
 
