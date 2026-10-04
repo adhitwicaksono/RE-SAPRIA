@@ -29,6 +29,85 @@ will be developed in the manuscript.
 
 ---
 
+## Practical annotation recommendation for repeat-rich Rafflesiaceae
+
+RE-SAPRIA supports **soft-masking as the default substrate for primary
+structural gene annotation in *Sapria himalayana*.**
+
+In the controlled Guo AUGUSTUS comparison, exposing repetitive sequence
+increased predicted gene number from 30,906 in the softmasked genome to
+106,782 in the unmasked genome. Most predictions unique to the unmasked
+analysis were strongly repeat-associated and showed little concordance with
+RNA-supported BRAKER annotation.
+
+Soft-masking therefore substantially suppresses repeat-driven prediction
+inflation while retaining repetitive sequence within genuine gene
+architecture.
+
+For future *Sapria* and Rafflesiaceae annotation, the recommended workflow is:
+
+**de novo repeat discovery → RepeatMasker soft-masking → evidence-supported
+structural annotation → protein/domain validation → post-annotation
+repeat-overlap audit**
+
+Unmasked annotation remains valuable as a sensitivity control and for
+investigating transposable-element-associated coding space, but should not be
+treated as the primary host-gene catalogue without independent evidence.
+
+This recommendation is directly supported for *S. himalayana* and should be
+tested rather than assumed to generalize identically across all Rafflesiaceae.
+
+---
+
+## Extreme repeat-expanded gene architecture
+
+Locus-level ranking was used to identify representative genes carrying the
+largest individual introns and the greatest intronic repeat burden.
+
+The five Guo representative genes with introns exceeding 100 kb all contain
+strongly repeat-enriched giant introns:
+
+| Gene | Longest intron | Repeat in longest intron | CDS repeat |
+|---|---:|---:|---:|
+| g15453 | 115,994 bp | 74.94% | 4.25% |
+| g29049 | 106,933 bp | 71.71% | 0.00% |
+| g7602 | 104,518 bp | 80.61% | 0.00% |
+| g3944 | 103,898 bp | 80.58% | 0.00% |
+| g827 | 102,135 bp | 83.14% | 0.00% |
+
+These loci provide concrete examples of repeat expansion occurring primarily
+inside introns rather than coding sequence.
+
+The full ranked top-20 sets are generated from the Phase 5B representative
+per-gene tables and retained as manuscript/supplementary source data.
+
+---
+
+## Two complementary views of genome and gene-space stability
+
+### Repeat burden
+
+![RepeatMasker burden](../04_phase4_repeat_annotation/figures/phase4_repeat_burden_nonN.png)
+
+Across the five principal genome representations, RepeatMasker masks
+approximately **84–90% of non-N sequence**. The representation-level genome
+span differences are concentrated overwhelmingly in repeat-rich sequence.
+
+### Conserved coding-space recovery
+
+![BUSCO protein mode](../06_phase6_functional_comparative_genomics/figures/phase6_busco_protein_mode.png)
+
+Despite large differences in assembly span and predicted gene number,
+protein-mode BUSCO recovery remains comparatively stable across the four
+standardized BRAKER proteomes.
+
+Together, these observations summarize one of the central contrasts emerging
+from RE-SAPRIA: **whole-genome representation is highly sensitive to repeat-rich
+sequence, whereas the recoverable conserved protein-coding core is much more
+stable.**
+
+---
+
 ## Manuscript synthesis
 
 The manuscript is being assembled from results generated and documented in
