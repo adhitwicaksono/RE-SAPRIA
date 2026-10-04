@@ -1,4 +1,4 @@
-**Status: ANALYTICALLY FROZEN — MANUSCRIPT DRAFTING**
+# **Status: ANALYTICALLY FROZEN — MANUSCRIPT DRAFTING**
 
 **Phases 0–7 analytical synthesis is complete and frozen as of 2026-10-04.**
 
