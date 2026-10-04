@@ -1,5 +1,5 @@
 # RE-SAPRIA untuk SMA 🌺🧬
-## Genome assembly bukan genom itu sendiri
+## Dari perbedaan assembly menuju arsitektur gen yang mengembang karena repeat
 
 
 ## Sebelum mulai: *Sapria* itu siapa? Dan siapa “Cai” dan “Guo”? 🌺
@@ -52,7 +52,7 @@ Perbedaan terbesar ≈ **1,09 Gb**.
 
 Pertanyaan yang diuji:
 
-> **Seberapa banyak perbedaan Cai–Guo yang merupakan biological divergence, dan seberapa banyak yang reconstruction-dependent?**
+> **Fitur mana pada *Sapria himalayana* yang mencerminkan arsitektur biologis yang nyata, dan perbedaan mana yang sensitif terhadap cara genome reconstruction dan annotation dilakukan?**
 
 ## 2. Assembly metrics tidak berdiri sendiri
 
@@ -148,6 +148,71 @@ Ini adalah technical rescue, bukan bukti assembly menjadi “lebih baik”.
 
 > **Pertanyaan utama comparative genomics bukan hanya “apa hasilnya?” tetapi “apakah hasil itu tetap bertahan ketika representasi dan metode berubah?”**
 
+## 8. Sequence kaya repeat menjelaskan sebagian besar perbedaan assembly span
+
+Pada lima representasi utama, RepeatMasker mengklasifikasikan
+**84,32–90,35% sequence non-N** sebagai repetitive sequence.
+
+| Perbandingan | Perbedaan span yang berkaitan dengan repeat-masked sequence |
+|---|---:|
+| Guo vs Cai published | **94,54%** |
+| Guo vs Cai min1250 | **94,01%** |
+| Guo vs Flye–HyPo | **95,23%** |
+| Cai published vs Flye–HyPo | **97,91%** |
+
+Ini adalah decomposition pada tingkat representasi. Hasil ini tidak membuktikan
+bahwa setiap repeat tambahan pada suatu assembly pasti merupakan sequence
+biologis yang benar-benar ada atau hilang pada assembly lain.
+
+## 9. Repeat expansion masuk ke dalam gene space
+
+| Representasi | Intron ≥10 kb | Intronic bp dalam intron ≥10 kb | Intron repeat overlap | CDS repeat overlap |
+|---|---:|---:|---:|---:|
+| Guo | 9,13% | 66,80% | 73,45% | 14,12% |
+| Cai fixed | 10,02% | 70,57% | 76,30% | 17,41% |
+| Cai min1250 | 11,18% | 71,74% | 74,20% | 13,18% |
+| Cai Flye–HyPo | 11,44% | 72,08% | 75,49% | 11,45% |
+
+Intron panjang sedikit jika dihitung jumlahnya, tetapi menampung sebagian besar
+sequence intronik dan sangat kaya repeat.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## 10. Perlakuan terhadap repeat mengubah gene prediction
+
+Pada genome Guo yang sama dengan trained AUGUSTUS model yang sama:
+
+| Kondisi | Predicted genes | CDS features |
+|---|---:|---:|
+| Softmasked | **30.906** | **153.165** |
+| Unmasked | **106.782** | **434.794** |
+
+Dari 60.530 model yang hanya muncul pada unmasked prediction, **97,41%**
+mempunyai ≥50% repeat overlap pada gene span, sedangkan hanya **6,21%**
+bertumpang tindih dengan RNA-supported BRAKER annotation pada strand yang sama.
+
+Ini tidak berarti semua unmasked-only models pasti salah. Namun, membuka repeat
+menciptakan prediction space yang sangat besar dan sangat berkaitan dengan
+repeat.
+
+Karena itu, RE-SAPRIA mendukung **soft-masking sebagai default untuk primary
+host-gene annotation** pada *S. himalayana*, sedangkan unmasked annotation
+berguna sebagai sensitivity control.
+
+## 11. Conserved coding core jauh lebih stabil
+
+Jumlah standardized BRAKER genes bervariasi dari **19.430 sampai 29.887**, tetapi
+protein-mode complete BUSCO hanya berubah dari **45,8% sampai 48,4%**.
+
+Assignment protein ke cross-representation orthogroups tetap berada pada
+**77,7–88,4%**.
+
+Gambaran akhirnya adalah:
+
+> **extreme repeat abundance → reconstruction-sensitive genome representation → repeat-expanded introns → repeat-sensitive gene prediction → comparatively stable conserved coding space**
+
+Jadi objek biologis akhirnya bukan “Guo versus Cai”, melainkan arsitektur genom
+***Sapria himalayana*** yang terlihat melalui beberapa representasi alternatif.
 
 ## Sumber utama
 
