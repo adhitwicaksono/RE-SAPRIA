@@ -18,4 +18,4 @@ It represents an intermediate stage of the internship rather than the final
 scientific interpretation of RE-SAPRIA.
 
 For the frozen project-level conclusions, figures, and tables, see
-`../07_phase7_manuscript_outputs/` from the repository root.
+[`../../07_phase7_manuscript_outputs/`](../../07_phase7_manuscript_outputs/) from the repository root.
