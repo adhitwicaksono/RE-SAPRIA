@@ -48,86 +48,25 @@ So assembly span alone does not explain recognizable conserved gene space.
 
 ---
 
-# What RE-SAPRIA currently shows
+# The three central hypotheses
 
-## 1. The assembly disagreement is concentrated in repeat-rich sequence
+RE-SAPRIA evaluates three linked ideas:
 
-RepeatMasker identifies approximately **84.32–90.35% of non-N sequence** as repetitive across the analyzed genome representations.
+1. **Biological divergence versus reconstruction**  
+   Cai–Guo differences reflect an interaction between genuine biological
+   divergence and reconstruction-dependent effects.
 
-For the major Guo-versus-Cai comparisons, approximately **94–95% of the non-N assembly-span difference lies in repeat-masked sequence** under the corresponding genome-specific repeat workflows.
+2. **Repeat architecture shapes annotation**  
+   Extreme repeat abundance makes gene prediction sensitive to representation,
+   repeat treatment, and annotation strategy.
 
-Among the three Cai structural representations, the non-repeat non-N component is comparatively stable at roughly **150–156 Mb**, even though represented genome span varies substantially.
+3. **Repeat-expanded gene space**  
+   Giant introns represent a reproducible interface between repetitive sequence
+   and gene architecture.
 
-**Interpretation:** the assembly-size paradox is primarily a **repeat-space problem**, although repeat recovery still mixes true biology with reconstruction effects.
-
----
-
-## 2. Long introns are a robust feature, not a single-annotation artifact
-
-Using one representative transcript per gene, selected by **longest total CDS length**:
-
-| Representation | Representative introns | Introns ≥10 kb | Intronic bp inside ≥10-kb introns |
-|---|---:|---:|---:|
-| **Guo** | 107,624 | **9.13%** | **66.80%** |
-| **Cai fixed-on-Guo** | 116,488 | **10.02%** | **70.57%** |
-| **Cai min1250** | 81,668 | **11.18%** | **71.74%** |
-| **Cai Flye–HyPo** | 77,610 | **11.44%** | **72.08%** |
-
-Only ~9–11% of representative introns are at least 10 kb long, yet they contain ~67–72% of total representative intronic sequence.
-
----
-
-## 3. Those long introns are strongly repeat-associated
-
-Across the four standardized BRAKER3 annotations:
-
-- **73.45–76.30%** of representative intronic sequence overlaps RepeatMasker intervals.
-- only **11.45–17.41%** of representative CDS sequence overlaps repeats.
-- intron length and repeat fraction are strongly positively associated (**Spearman ρ = 0.658–0.748**).
-
-The trend is consistent across genome representations: longer introns contain progressively larger repeat fractions.
-
-**Working interpretation:** repetitive sequence penetrates gene space primarily by expanding introns rather than coding sequence.
-
----
-
-## 4. Repeat visibility can massively inflate ab initio gene prediction
-
-A controlled Guo AUGUSTUS experiment holds the genome coordinates and trained model constant while changing repeat visibility:
-
-| Guo AUGUSTUS input | Predicted genes | CDS features |
-|---|---:|---:|
-| **Softmasked** | **30,906** | **153,165** |
-| **Unmasked** | **106,782** | **434,794** |
-
-The unmasked genome produces **3.46×** as many predicted genes.
-
-Among **60,530** unmasked models without a same-strand softmasked AUGUSTUS counterpart:
-
-- median gene-span repeat fraction = **100%**
-- median CDS repeat fraction = **100%**
-- only **6.21%** overlap an RNA-supported BRAKER gene on the same strand
-
-Thus, exposing repetitive sequence creates a large **repeat-associated, weakly RNA-supported prediction space**.
-
-This does **not** mean every extra model is a false gene; some may represent TE proteins or genuine repeat-associated loci.
-
----
-
-## 5. Annotation scale does not simply follow assembly span
-
-The standardized softmasked BRAKER3 panel contains:
-
-| Representation | Genes | Transcripts | Gene density |
-|---|---:|---:|---:|
-| **Guo** | **29,792** | **34,471** | **14.46/Mb** |
-| **Cai fixed-on-Guo** | **29,887** | **34,783** | **14.50/Mb** |
-| **Cai min1250** | **20,149** | **24,733** | **16.19/Mb** |
-| **Cai Flye–HyPo** | **19,430** | **23,822** | **20.10/Mb** |
-
-Cai min1250 and Cai Flye–HyPo differ by **22.3% in assembly span** but only ~**3.6–3.7%** in gene/transcript count.
-
-Cai Flye–HyPo also produces a higher start+stop structural-completeness proxy than Cai min1250 (**97.30% vs 88.00%** of transcripts).
+The Phase 7 manuscript-preparation directory records the analytical endpoint.
+Detailed integrated interpretation is reserved for the manuscript and eventual
+preprint/publication.
 
 ---
 
@@ -188,32 +127,9 @@ A Guo Flye reconstruction was attempted but did not yield a usable completed ass
 | **7** | Manuscript preparation | **Active** |
 | **90** | Internship exploratory track | **Active / archival** |
 
-Phases 0–6 are analytically complete.
+**Phases 0–6 are analytically frozen.**
 
-The project has now entered **Phase 7: manuscript preparation**.
-
-The detailed integrated interpretation is intentionally being reserved for the
-manuscript and eventual preprint/publication.
-
----
-
-# Phase 6 direction
-
-For each standardized BRAKER3 annotation:
-
-1. extract CDS and peptides with `gffread` using the **matching softmasked genome**;
-2. select one representative transcript per gene by **longest total CDS length**;
-3. perform protein QC;
-4. use representative proteins for:
-   - DIAMOND `blastp` against **Swiss-Prot** as the first curated homology layer;
-   - broader **NR rescue** for weak/no Swiss-Prot hits;
-   - InterProScan / Pfam;
-   - eggNOG-mapper;
-   - OrthoFinder;
-   - BUSCO protein mode;
-5. retain CDS sequences for nucleotide homology, codon analyses, Ka/Ks where appropriate, and model validation.
-
-Functional labels will be integrated across evidence sources rather than copied from a single top hit.
+Phase 7 is now the active project phase.
 
 ---
 
@@ -221,36 +137,52 @@ Functional labels will be integrated across evidence sources rather than copied 
 
 RE-SAPRIA deliberately separates observation from inference.
 
-- **Two accessions are not a population sample.**
+- Two accessions are not a population sample.
 - Assembly span is not automatically biological genome size.
-- Cai–Guo structural discrepancies are not automatically biological structural variants.
-- Lack of Cai read support is not automatically Guo-specific DNA.
-- Repeat-class percentages are **method-sensitive** because RepeatModeler libraries were learned independently for each representation.
-- Additional unmasked gene predictions are not automatically genuine genes, but neither are they automatically false.
-- Repeat-rich giant introns are structurally robust, but repeat content alone does not establish function.
-- Strong biological claims should survive multiple evidence types and alternative genome representations.
+- Cai–Guo structural discrepancies are not automatically biological structural
+  variants.
+- Lack of read support is not automatically accession-specific DNA.
+- Repeat-class proportions can be method-sensitive.
+- Additional gene predictions are not automatically genuine genes or
+  automatically artifacts.
+- Repeat-rich giant introns do not establish regulatory function by themselves.
+- Lack of detectable protein homology does not establish a novel gene.
+- Cross-representation robustness should precede strong biological claims.
 
 ---
 
 # Data availability
 
-The standardized datasets are archived on Zenodo:
+Large standardized datasets are archived separately from ordinary Git history.
 
-**Phase 4: RepeatMasker annotations**
-**DOI: [10.5281/zenodo.23105473](https://doi.org/10.5281/zenodo.23105473)**
+## Phase 4 — repeat annotation
 
-**Phase 5A BRAKER3 and AUGUSTUS GFF3 annotations**
-**DOI: [10.5281/zenodo.23072450](https://doi.org/10.5281/zenodo.23072450)**
+**Zenodo DOI:**  
+https://doi.org/10.5281/zenodo.23105473
 
-Large primary and intermediate files are intentionally kept outside ordinary Git history. GitHub stores compact summaries, scripts, figures, decision records, and interpretation.
+## Phase 5A — standardized BRAKER3 and AUGUSTUS annotations
+
+**Zenodo DOI:**  
+https://doi.org/10.5281/zenodo.23072450
+
+GitHub stores compact source tables, scripts, figures, analytical decisions,
+and documentation suitable for reproducibility.
+
+Additional manuscript-associated datasets may be archived alongside the
+preprint or publication.
 
 ---
 
 # Project team
 
+## Contributors
+
 - **Dr. Adhityo Wicaksono** — project lead; conceptualization, analysis, interpretation, manuscript development
 - **Prof. Dr. rer. nat. Arli Aditya Parikesit** — co-supervisor
 - **Andrian Dary Fawwaz** — student research intern
+
+## AI assistant
+
 - **H.E.L.I.O.S. / OpenAI ChatGPT** — AI-assisted workflow design, analysis support, interpretation, and documentation
 
 ---
@@ -269,7 +201,3 @@ Large primary and intermediate files are intentionally kept outside ordinary Git
 # License
 
 MIT License.
-
----
-
-## One species. Multiple plausible genome representations. The biology is hidden in the disagreement.
