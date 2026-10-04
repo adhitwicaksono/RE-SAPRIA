@@ -1,0 +1,21 @@
+rank	gene_id	transcript_id	functional_label	label_source	orthogroup	orthogroup_representations	PFAMs	intronic_repeat_kb	intron_repeat_pct	longest_intron_kb	longest_intron_repeat_pct	cds_repeat_pct	also_top20_largest_intron
+1	g1117	g1117.t5	Molybdenum cofactor sulfurase	Swiss-Prot	OG0006116	4	Aminotran_5,MOSC,MOSC_N	272.373	82.09396531457402	45.179	92.2707452577525	0.75664621676891	False
+2	g7508	g7508.t3	Intermembrane lipid transfer protein VPS13	Swiss-Prot	OG0009844	4	Chorein_N,PH,Pex24p,SHR-BD,VPS13,VPS13_C,VPS13_mid_rpt,Vps62	272.263	73.13412789869963	24.677	71.8604368440248	2.37293570626903	False
+3	g7893	g7893.t3	TATA-binding protein-associated factor BTAF1	Swiss-Prot	OG0009703	4	DUF3535,HEAT,HEAT_EZ,Helicase_C,SNF2_N	254.358	76.78314838740839	37.273	80.81989643978214	0.0	False
+4	g7210	g7210.t1	Choline transporter protein 1	Swiss-Prot	OG0011850	3	Choline_transpo	253.238	81.92037576788827	53.839	90.98237337246236	0.0	False
+5	g7261	g7261.t1	Berberine bridge enzyme-like 18	Swiss-Prot	OG0002638	4	BBE,FAD_binding_4	242.87	81.76807856630631	47.477	86.20173978979295	1.09947643979057	False
+6	g10916	g10916.t1	Transcription factor IIIC subunit delta N-term	eggNOG	OG0004001	4	TFIIIC_delta,WD40,zf-TFIIIC	241.788	80.50395714233393	59.654	79.74318570422771	0.0	False
+7	g660	g660.t4	Uridine-cytidine kinase C	Swiss-Prot	OG0003726	4	Cytidylate_kin,PRK	225.941	80.31287545409953	38.425	82.6779440468445	8.87335874629394	False
+8	g11920	g11920.t1	DNA mismatch repair protein MSH1, mitochondrial	Swiss-Prot	OG0006168	4	GIY-YIG,MutS_I,MutS_V	224.94	77.30481342232058	45.712	67.49868743437172	0.0	False
+9	g3945	g3945.t1	Protein PIR	Swiss-Prot	OG0000084	4	DUF1394,FragX_IP	223.961	81.0815409623593	30.036	89.59914768943933	0.44444444444444	False
+10	g2379	g2379.t1	DExH-box ATP-dependent RNA helicase DExH14	Swiss-Prot	OG0003975	4	DEAD,Helicase_C,Sec63	223.139	75.19528485640919	29.834	71.85090835958972	0.45237172030502	False
+11	g7229	g7229.t1	TELO2-interacting protein 1 homolog	Swiss-Prot	OG0006730	4	-	200.431	80.94886147930954	35.181	82.95386714419715	0.0	False
+12	g8622	g8622.t3	DENN domain-containing protein 5B	Swiss-Prot	OG0004749	4	DENN,dDENN,uDENN	200.423	74.88781195003568	45.732	76.28356511851658	0.0	False
+13	g29049	g29049.t2	CSC1-like protein RXW8	Swiss-Prot	OG0009278	4	PHM7_cyt,RSN1_7TM,RSN1_TM	200.371	75.01216690750904	106.933	71.70658262650444	0.0	True
+14	g2920	g2920.t1	Spatacsin	Swiss-Prot	OG0009204	4	Spatacsin_C	200.328	79.01456615115193	30.9	86.27831715210355	0.0	False
+15	g9604	g9604.t2	Symplekin	Swiss-Prot	OG0002504	4	DUF3453,Symplekin_C	194.941	73.88858777020137	36.557	76.08392373553629	0.0	False
+16	g11077	g11077.t1	Calcium-transporting ATPase 3, endoplasmic reticulum-type	Swiss-Prot	OG0005176	4	Cation_ATPase,Cation_ATPase_C,Cation_ATPase_N,E1-E2_ATPase,Hydrolase,Hydrolase_3	188.498	76.85827754083522	21.882	91.41303354355178	0.0	False
+17	g827	g827.t2	Aldehyde dehydrogenase family 3 member H1	Swiss-Prot	OG0007087	4	Aldedh	181.761	81.44362694579118	102.135	83.13800362265629	0.0	True
+18	g7488	g7488.t1	Bifunctional aspartokinase/homoserine dehydrogenase 1, chloroplastic	Swiss-Prot	OG0004422	4	AA_kinase,ACT,ACT_7,Homoserine_dh,NAD_binding_3	178.008	81.02100079196745	35.543	84.14315055003799	0.0	False
+19	g8771	g8771.t2	Sterol 3-beta-glucosyltransferase UGT80A2	Swiss-Prot	OG0002896	4	Glyco_transf_28,UDPGT	176.581	77.73385396260801	48.167	89.5177196005564	0.0	False
+20	g15028	g15028.t1	Protein furry homolog-like	Swiss-Prot	OG0004396	4	MOR2-PAG1_C,MOR2-PAG1_N,MOR2-PAG1_mid	176.381	78.6990063403251	42.012	81.65524135961154	0.0	False
