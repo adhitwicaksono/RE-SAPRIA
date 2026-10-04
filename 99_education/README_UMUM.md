@@ -113,7 +113,64 @@ Tetapi:
 
 Itulah inti RE-SAPRIA.
 
-Phase 4 dan Phase 5 akan menambahkan bagian yang mungkin paling liar: repeat dan gene annotation.
+## Dan bagian paling liar ternyata memang repeat
+
+Setelah repeat annotation selesai, misterinya menjadi jauh lebih jelas.
+
+Pada representasi genom utama, sekitar **84–90% DNA non-gap** diklasifikasikan
+sebagai repetitive sequence. Bahkan, sekitar **94–98% perbedaan besar dalam
+panjang genom hasil rekonstruksi berkaitan dengan sequence yang kaya repeat**.
+
+Artinya, perbedaan antar-rekonstruksi terutama terkonsentrasi pada bagian genom
+yang memang paling sulit disusun oleh algoritme assembly.
+
+## Repeat tidak hanya berada di antara gen
+
+Sebagian repeat yang paling menarik justru berada **di dalam gen**, terutama
+pada intron.
+
+Pada beberapa representasi genom yang dianalisis dengan pipeline yang sama,
+hanya sekitar satu dari sepuluh intron yang panjangnya lebih dari 10 kb, tetapi
+intron-intron panjang tersebut menampung sekitar dua pertiga atau lebih dari
+seluruh DNA intronik.
+
+Beberapa intron bahkan lebih panjang dari 100 kb dan sebagian besar sequence-nya
+repetitif.
+
+Banyak locus ekstrem tersebut tetap dapat dikenali sebagai host genes dengan
+fungsi seluler umum seperti transcription, RNA processing, DNA repair,
+transport, dan metabolism.
+
+![Repeat-expanded gene space](../07_phase7_manuscript_outputs/figures%20v2/png/Fig3_repeat_expanded_gene_space.png)
+
+## Bahkan gene prediction dapat terkecoh oleh repeat
+
+Ketika genome yang sama diberikan kepada gene predictor dengan repetitive
+sequence tetap terlihat, jumlah predicted genes meningkat sangat besar.
+
+Itu tidak berarti *Sapria* tiba-tiba memiliki puluhan ribu gen biologis baru.
+Hal tersebut menunjukkan betapa kuatnya repeat-rich DNA memengaruhi prediksi
+komputasional.
+
+Karena itu, proyek ini mendukung **soft-masking repeat untuk primary gene
+annotation**, sementara unmasked analysis tetap berguna sebagai kontrol.
+
+## Gambaran akhirnya
+
+RE-SAPRIA bermula dari ketidaksepakatan antara dua genome assembly yang telah
+dipublikasikan.
+
+Tetapi akhirnya proyek ini memberi gambaran biologis tentang *Sapria himalayana*
+itu sendiri:
+
+> **genom yang luar biasa kaya repeat, sangat sensitif terhadap cara
+> direkonstruksi, mempunyai repeat yang mengembang jauh ke dalam intron, tetapi
+> tetap mempertahankan protein-coding core konservatif yang jauh lebih stabil
+> daripada ukuran assembly-nya.**
+
+Jadi pertanyaannya bukan lagi “assembly mana yang menang?”
+
+Perbedaannya justru menjadi petunjuk.
 
 
 ## Sumber utama
