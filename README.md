@@ -180,13 +180,20 @@ A Guo Flye reconstruction was attempted but did not yield a usable completed ass
 |---|---|---|
 | **0** | Published Cai–Guo baseline | **Complete** |
 | **1** | Cai independent reassembly | **Complete** |
-| **2** | Cai mapping to Guo, variants, Cai-fixed | **Complete** |
+| **2** | Cai mapping to Guo and sequence comparison | **Complete** |
 | **3** | Harmonized genome comparison | **Complete** |
 | **4** | Repeat discovery and annotation | **Complete** |
-| **5** | Structural annotation + repeat-aware interpretation | **Phase 5A + core 5B complete** |
-| **6** | Functional and comparative genomics | **Beginning** |
-| **7** | Manuscript outputs | **Planned** |
+| **5** | Structural and repeat-aware gene annotation | **Complete** |
+| **6** | Functional and comparative genomics | **Complete** |
+| **7** | Manuscript preparation | **Active** |
 | **90** | Internship exploratory track | **Active / archival** |
+
+Phases 0–6 are analytically complete.
+
+The project has now entered **Phase 7: manuscript preparation**.
+
+The detailed integrated interpretation is intentionally being reserved for the
+manuscript and eventual preprint/publication.
 
 ---
 
