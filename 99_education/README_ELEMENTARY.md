@@ -80,6 +80,35 @@ Yes.
 
 So even though the assemblies are very different in size, much of the DNA still recognizes the other version.
 
+## 🌪️ What was making the puzzle so difficult?
+
+When we looked deeper, we found that *Sapria* has an enormous amount of
+**repeated DNA**.
+
+Imagine a book in which the same words, sentences, or paragraphs appear again
+and again. A computer rebuilding the book can have trouble deciding where every
+repeated piece belongs.
+
+Most of the big differences between the reconstructed genomes occur in these
+repeat-rich parts.
+
+## 🧬 Repeats even appear inside genes
+
+Genes are not always one continuous instruction.
+
+Many plant genes contain sections called **introns** between the parts that
+carry protein instructions. In *Sapria*, some introns are extraordinarily long
+and filled with repeated DNA.
+
+Some are more than **100,000 DNA letters long**.
+
+Yet the protein-coding parts of many of these genes can still be recognized.
+
+So the strangest part of the story is not simply that different computers built
+different-sized genomes.
+
+It is that *Sapria* really has a very unusual, repeat-rich genome architecture.
+
 ## 🕵️ Scientists are detectives
 
 We compare:
@@ -93,7 +122,7 @@ Every type of data is a **clue**.
 
 ## ⭐ Main lesson
 
-> **When two answers disagree, scientists do not simply choose one. They investigate why the answers disagree.**
+> **Scientists did not choose which genome reconstruction “won.” They used the disagreement to discover something real about *Sapria*: repeated DNA makes its genome unusually difficult to rebuild, but many important gene instructions can still be recognized.**
 
 ## 🤔 Think about it
 
