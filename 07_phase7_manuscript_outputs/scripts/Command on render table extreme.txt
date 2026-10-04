@@ -1,0 +1,18 @@
+python phase7_render_extreme_gene_tables.py \
+  --repeat-heavy top20_repeat_heavy_Guo.tsv \
+  --largest-introns top20_largest_introns_Guo.tsv \
+  --swissprot "Diamond on Guo_ Blast Tabular (SwissProt).tsv" \
+  --nr "Diamond on Guo_ Blast Tabular (NR).tsv" \
+  --eggnog "eggNOG Mapper on Guo_ annotations.tsv" \
+  --orthogroups orthogroups.tsv \
+  --interpro "InterProScan on Guo.xlsx" \
+  --tables ../tables \
+  --figures ../figures
+
+python phase7_crossrepresentation_extreme_genes.py \
+  --repeat-heavy-annotated phase7_top20_repeat_heavy_genes_annotated.tsv \
+  --largest-introns-annotated phase7_top20_largest_intron_genes_annotated.tsv \
+  --repeat-heavy-by-representation top20_repeat_heavy_by_representation.tsv \
+  --largest-introns-by-representation top20_largest_introns_by_representation.tsv \
+  --orthogroups orthogroups.tsv \
+  --outdir ../tables
