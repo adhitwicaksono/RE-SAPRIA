@@ -8,29 +8,38 @@ Major analytical and repository milestones for RE-SAPRIA.
 
 ### Phase 6 complete
 
-- Completed representative CDS and protein sequence QC.
-- Completed functional annotation using:
-  - DIAMOND / Swiss-Prot;
-  - DIAMOND / NR;
-  - eggNOG-mapper;
-  - InterProScan / Pfam.
+- Completed representative CDS and peptide sequence preparation and QC.
+- Completed functional annotation using DIAMOND against Swiss-Prot and NR.
+- Completed eggNOG-mapper functional annotation.
+- Completed InterProScan / Pfam domain analysis.
 - Completed cross-representation OrthoFinder analysis.
 - Completed BUSCO protein-mode validation.
-- Completed final integration of structural, repeat-aware, sequence-level,
-  functional, and comparative evidence.
-- Froze Phases 0–6 for manuscript development.
-- Retained candidate orphan-like proteins as exploratory observations rather
-  than making a lineage-specific gene claim without appropriate external
-  phylogenetic comparators.
+- Integrated structural, repeat-aware, sequence-level, functional, and
+  comparative evidence.
+- Froze the Phase 0–6 analytical workflow for manuscript preparation.
+- Retained orphan-like proteins as exploratory observations rather than making
+  unsupported lineage-specific or de novo gene claims.
 
 ### Phase 7 initiated
 
 - Opened manuscript-preparation phase.
-- Defined the final manuscript around the three central RE-SAPRIA hypotheses:
-  biological divergence versus reconstruction, repeat-dependent annotation,
-  and repeat-expanded giant introns.
-- Restricted Phase 7 to manuscript synthesis, presentation, provenance, and
-  reviewer-driven follow-up rather than continued exploratory analysis.
+- Defined the manuscript synthesis around the three central RE-SAPRIA
+  hypotheses:
+  - biological divergence versus reconstruction;
+  - repeat-dependent annotation;
+  - repeat-expanded giant introns.
+- Prepared manuscript figure-plate and source-table framework.
+- Adopted a Phase 7 freeze rule: additional core analysis should be performed
+  only to resolve manuscript ambiguities, reviewer requests, or analytical
+  corrections.
+- Integrated manuscript-level interpretation is intentionally reserved for the
+  manuscript and eventual preprint/publication.
+
+### Project state
+
+**Phases 0–6 complete.**
+
+**Phase 7 active — manuscript preparation.**
 
 ---
 
