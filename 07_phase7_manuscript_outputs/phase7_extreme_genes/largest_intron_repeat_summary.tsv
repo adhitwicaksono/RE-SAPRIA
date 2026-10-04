@@ -1,0 +1,5 @@
+representation	n	largest_intron_bp	median_longest_intron_repeat_pct	n_repeat_majority_ge50pct	n_highly_repeat_laden_ge75pct
+Cai Flye–HyPo	20	105468	84.7801236884928	20	19
+Cai fixed-on-Guo	20	115994	82.82006543790348	20	20
+Cai min1250	20	129246	79.67713743434155	17	13
+Guo published	20	115994	80.53538400716565	20	17

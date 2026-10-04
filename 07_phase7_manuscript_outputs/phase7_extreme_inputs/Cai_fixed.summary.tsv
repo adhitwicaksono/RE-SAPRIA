@@ -1,0 +1,2 @@
+label	genes	rep_introns	median_intron_bp	max_intron_bp	total_intron_bp	intron_repeat_bp	weighted_intron_repeat_pct	spearman_length_repeat_fraction_rho	spearman_p	median_intron_repeat_fraction	weighted_CDS_repeat_pct	median_gene_span_repeat_pct	complete_start_stop_proxy_pct
+Cai fixed-on-Guo	29887	116488	159.0	115994	343159550	261828655	76.29939338712852	0.6575509317968252	0.0	0.0	17.411259110874376	45.87786259541985	91.3674841904507

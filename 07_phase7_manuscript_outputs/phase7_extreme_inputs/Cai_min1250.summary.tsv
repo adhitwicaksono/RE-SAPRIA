@@ -1,0 +1,2 @@
+label	genes	rep_introns	median_intron_bp	max_intron_bp	total_intron_bp	intron_repeat_bp	weighted_intron_repeat_pct	spearman_length_repeat_fraction_rho	spearman_p	median_intron_repeat_fraction	weighted_CDS_repeat_pct	median_gene_span_repeat_pct	complete_start_stop_proxy_pct
+Cai min1250	20149	81668	175.0	129246	266184037	197498096	74.19607059306865	0.7160880988398945	0.0	0.0	13.184247708009073	50.119812134572996	85.54270683408606

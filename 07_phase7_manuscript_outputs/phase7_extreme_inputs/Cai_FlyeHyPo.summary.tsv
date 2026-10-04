@@ -1,0 +1,2 @@
+label	genes	rep_introns	median_intron_bp	max_intron_bp	total_intron_bp	intron_repeat_bp	weighted_intron_repeat_pct	spearman_length_repeat_fraction_rho	spearman_p	median_intron_repeat_fraction	weighted_CDS_repeat_pct	median_gene_span_repeat_pct	complete_start_stop_proxy_pct
+Cai Flye–HyPo	19430	77610	162.0	105468	256583699	193691340	75.48856016765119	0.7480468695130336	0.0	0.0	11.452324944242148	41.8459950751023	96.829644879053

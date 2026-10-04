@@ -1,0 +1,2 @@
+label	genes	rep_introns	median_intron_bp	max_intron_bp	total_intron_bp	intron_repeat_bp	weighted_intron_repeat_pct	spearman_length_repeat_fraction_rho	spearman_p	median_intron_repeat_fraction	weighted_CDS_repeat_pct	median_gene_span_repeat_pct	complete_start_stop_proxy_pct
+Guo published	29792	107624	194.0	115994	302093824	221879948	73.44736316092315	0.7023382263363697	0.0	0.0	14.122152993228495	37.856398882385584	92.91756176154672
