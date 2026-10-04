@@ -1,0 +1,6 @@
+metric	softmasked	unmasked_or_unmasked_only
+AUGUSTUS_genes	30906	106782
+AUGUSTUS_CDS_features	153165	434794
+unmasked_only_models	NA	60530
+unmasked_only_gene_repeat_ge50_pct	NA	97.41
+unmasked_only_RNA_BRAKER_overlap_pct	NA	6.21

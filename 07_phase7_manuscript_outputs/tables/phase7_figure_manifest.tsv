@@ -1,0 +1,6 @@
+figure	basename	principal_message	source_phases
+Figure 1	Fig1_genome_representation_paradox	Large differences in represented genome span coexist with strong Cai-read support for Guo and broadly similar conserved-gene recovery.	Phases 2–3
+Figure 2	Fig2_repeat_space	Most representation-level assembly-span disagreement is concentrated in repeat-rich sequence.	Phase 4
+Figure 3	Fig3_repeat_expanded_gene_space	Long introns contain disproportionate intronic sequence and are strongly repeat-associated.	Phases 5A–5B
+Figure 4	Fig4_annotation_sensitivity	Repeat visibility greatly expands repeat-associated ab initio prediction space.	Phase 5B
+Figure 5	Fig5_stable_coding_core	Conserved and cross-representation coding space is substantially more stable than whole-genome representation.	Phase 6
