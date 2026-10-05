@@ -1,0 +1,3 @@
+python make_mummer_supp_plate.py \
+    --input-dir /home/adhitwicaksono/test \
+    --output Supplementary_Fig_S1_MUMmer

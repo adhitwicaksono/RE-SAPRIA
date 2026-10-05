@@ -1,0 +1,45 @@
+#Nucmer
+/usr/bin/time -v nucmer \
+  --mum \
+  -l 100 \
+  -c 500 \
+  -t 1 \
+  -p Cai_self_strict \
+  ../Guo_vs_CaiReassembly/Cai_reassembly.fasta \
+  ../Guo_vs_CaiReassembly/Cai_reassembly.fasta \
+  2> Cai_self_strict.time.log
+
+#Delta Filter
+delta-filter -1 \
+  Cai_self_strict.delta \
+  > Cai_self_strict.1delta
+  
+## Strict one to one
+delta-filter -1 \
+  CaiPublishedRef_GuoPublishedQuery_strict.delta \
+  > CaiPublishedRef_GuoPublishedQuery_strict.1delta
+  
+## Many to many
+delta-filter -m \
+  CaiPublishedRef_GuoPublishedQuery_strict.delta \
+  > CaiPublishedRef_GuoPublishedQuery_strict.mdelta
+
+#DNAdiff
+dnadiff \
+  -p Cai_self_dnadiff \
+  -d Cai_self_strict.delta
+
+#Mummerplot  
+mummerplot \
+  --png \
+  --layout \
+  -R ../Guo_vs_CaiReassembly/Cai_reassembly.fasta \
+  -Q ../Guo_vs_CaiReassembly/Cai_reassembly.fasta \
+  -p Cai_self_strict \
+  Cai_self_strict.1delta
+  
+gnuplot Cai_self_strict.gp
+
+#Monitor
+watch -n 2 free -h
+
